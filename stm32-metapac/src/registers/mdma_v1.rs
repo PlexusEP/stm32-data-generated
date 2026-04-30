@@ -1263,60 +1263,60 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "SINGLE",
-                    description: Some(
-                        "Single transfer",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "INCR4",
-                    description: Some(
-                        "Incremental burst of 4 beats",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "INCR8",
-                    description: Some(
-                        "Incremental burst of 8 beats",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "INCR16",
-                    description: Some(
-                        "Incremental burst of 16 beats",
-                    ),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "INCR32",
-                    description: Some(
-                        "Incremental burst of 32 beats",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "INCR64",
-                    description: Some(
-                        "Incremental burst of 64 beats",
-                    ),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "INCR128",
+                    name: "Incr128",
                     description: Some(
                         "Incremental burst of 128 beats",
                     ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "INCR256",
+                    name: "Incr16",
+                    description: Some(
+                        "Incremental burst of 16 beats",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Incr256",
                     description: Some(
                         "Incremental burst of 256 beats",
                     ),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Incr32",
+                    description: Some(
+                        "Incremental burst of 32 beats",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Incr4",
+                    description: Some(
+                        "Incremental burst of 4 beats",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Incr64",
+                    description: Some(
+                        "Incremental burst of 64 beats",
+                    ),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "Incr8",
+                    description: Some(
+                        "Incremental burst of 8 beats",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Single",
+                    description: Some(
+                        "Single transfer",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -1326,18 +1326,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "SYSTEM",
-                    description: Some(
-                        "System/AXI bus",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "AHB",
+                    name: "Ahb",
                     description: Some(
                         "AHB bus/TCM",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "System",
+                    description: Some(
+                        "System/AXI bus",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -1347,32 +1347,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "FIXED",
+                    name: "Decrement",
+                    description: Some(
+                        "Address pointer is decremented after each data transfer",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Fixed",
                     description: Some(
                         "Address pointer is fixed",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "RESERVED",
-                    description: Some(
-                        "Reserved",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "INCREMENT",
+                    name: "Increment",
                     description: Some(
                         "Address pointer is incremented after each data transfer",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "DECREMENT",
+                    name: "Reserved",
                     description: Some(
-                        "Address pointer is decremented after each data transfer",
+                        "Reserved",
                     ),
-                    value: 3,
+                    value: 1,
                 },
             ],
         },
@@ -1382,25 +1382,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "RIGHT_PADDED",
+                    name: "LeftPadded",
+                    description: Some(
+                        "Left aligned (padded with 0s). if source data is larger than destination size, only MSB part of the source is written to the destination address. The reminder part is discarded",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "RightPadded",
                     description: Some(
                         "Right aligned, padded with 0s (default). If source data is larger than destination size, only LSB part of the source is written to the destination address. The reminder part is discarded",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "RIGHT_SIGN_EXTENDED",
+                    name: "RightSignExtended",
                     description: Some(
                         "Right aligned, sign extended",
                     ),
                     value: 1,
-                },
-                EnumVariant {
-                    name: "LEFT_PADDED",
-                    description: Some(
-                        "Left aligned (padded with 0s). if source data is larger than destination size, only MSB part of the source is written to the destination address. The reminder part is discarded",
-                    ),
-                    value: 2,
                 },
             ],
         },
@@ -1410,28 +1410,28 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "LOW",
-                    description: Some(
-                        "Low",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MEDIUM",
-                    description: Some(
-                        "Medium",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "HIGH",
+                    name: "High",
                     description: Some(
                         "High",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "VERY_HIGH",
+                    name: "Low",
+                    description: Some(
+                        "Low",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Medium",
+                    description: Some(
+                        "Medium",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "VeryHigh",
                     description: Some(
                         "Very high",
                     ),
@@ -1445,28 +1445,28 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "BUFFER",
-                    description: Some(
-                        "Each MDMA request (software or hardware) triggers a buffer transfer",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "BLOCK",
+                    name: "Block",
                     description: Some(
                         "Each MDMA request (software or hardware) triggers a block transfer",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "REPEATED",
+                    name: "Buffer",
+                    description: Some(
+                        "Each MDMA request (software or hardware) triggers a buffer transfer",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Repeated",
                     description: Some(
                         "Each MDMA request (software or hardware) triggers a repeated block transfer",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "WHOLE_DATA",
+                    name: "WholeData",
                     description: Some(
                         "Each MDMA request (software or hardware) triggers the transfer of the whole data for the respective channel (for example linked list) until the channel reach the end and it is disabled.",
                     ),
@@ -1480,14 +1480,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ADD",
+                    name: "Add",
                     description: Some(
                         "Add",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SUBTRACT",
+                    name: "Subtract",
                     description: Some(
                         "Subtract",
                     ),
@@ -1501,32 +1501,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "BYTE",
+                    name: "Byte",
                     description: Some(
                         "Byte (8-bit)",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "HALF_WORD",
+                    name: "DoubleWord",
+                    description: Some(
+                        "DoubleWord (64-bit)",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "HalfWord",
                     description: Some(
                         "HalfWord (16-bit)",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "WORD",
+                    name: "Word",
                     description: Some(
                         "Word (32-bit)",
                     ),
                     value: 2,
-                },
-                EnumVariant {
-                    name: "DOUBLE_WORD",
-                    description: Some(
-                        "DoubleWord (64-bit)",
-                    ),
-                    value: 3,
                 },
             ],
         },

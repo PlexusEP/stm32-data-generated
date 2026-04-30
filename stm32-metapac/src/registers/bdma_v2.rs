@@ -282,14 +282,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "FROM_PERIPHERAL",
-                    description: Some("Read from peripheral"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FROM_MEMORY",
+                    name: "FromMemory",
                     description: Some("Read from memory"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "FromPeripheral",
+                    description: Some("Read from peripheral"),
+                    value: 0,
                 },
             ],
         },
@@ -299,22 +299,22 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "LOW",
-                    description: Some("Low priority"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MEDIUM",
-                    description: Some("Medium priority"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "HIGH",
+                    name: "High",
                     description: Some("High priority"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "VERY_HIGH",
+                    name: "Low",
+                    description: Some("Low priority"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Medium",
+                    description: Some("Medium priority"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "VeryHigh",
                     description: Some("Very high priority"),
                     value: 3,
                 },
@@ -326,19 +326,19 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "BITS8",
-                    description: Some("8-bit size"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "BITS16",
+                    name: "Bits16",
                     description: Some("16-bit size"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "BITS32",
+                    name: "Bits32",
                     description: Some("32-bit size"),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "Bits8",
+                    description: Some("8-bit size"),
+                    value: 0,
                 },
             ],
         },

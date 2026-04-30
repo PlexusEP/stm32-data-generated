@@ -553,25 +553,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "NO_PACK",
-                    description: Some(
-                        "Without data packing, CDR/CDR2 not used",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FORMAT32TO10",
+                    name: "Format32to10",
                     description: Some(
                         "CDR formatted for 32-bit down to 10-bit resolution",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "FORMAT8",
+                    name: "Format8",
                     description: Some(
                         "CDR formatted for 8-bit resolution",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "NoPack",
+                    description: Some(
+                        "Without data packing, CDR/CDR2 not used",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -581,60 +581,60 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 5,
             variants: &[
                 EnumVariant {
-                    name: "INDEPENDENT",
+                    name: "DualA",
                     description: Some(
-                        "Independent mode",
+                        "Dual, alternate trigger mode only",
                     ),
-                    value: 0,
+                    value: 9,
                 },
                 EnumVariant {
-                    name: "DUAL_RJ",
-                    description: Some(
-                        "Dual, combined regular simultaneous + injected simultaneous mode",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "DUAL_RA",
-                    description: Some(
-                        "Dual, combined regular simultaneous + alternate trigger mode",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "DUAL_IJ",
-                    description: Some(
-                        "Dual, combined interleaved mode + injected simultaneous mode",
-                    ),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "DUAL_J",
-                    description: Some(
-                        "Dual, injected simultaneous mode only",
-                    ),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "DUAL_R",
-                    description: Some(
-                        "Dual, regular simultaneous mode only",
-                    ),
-                    value: 6,
-                },
-                EnumVariant {
-                    name: "DUAL_I",
+                    name: "DualI",
                     description: Some(
                         "Dual, interleaved mode only",
                     ),
                     value: 7,
                 },
                 EnumVariant {
-                    name: "DUAL_A",
+                    name: "DualIj",
                     description: Some(
-                        "Dual, alternate trigger mode only",
+                        "Dual, combined interleaved mode + injected simultaneous mode",
                     ),
-                    value: 9,
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "DualJ",
+                    description: Some(
+                        "Dual, injected simultaneous mode only",
+                    ),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "DualR",
+                    description: Some(
+                        "Dual, regular simultaneous mode only",
+                    ),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "DualRa",
+                    description: Some(
+                        "Dual, combined regular simultaneous + alternate trigger mode",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "DualRj",
+                    description: Some(
+                        "Dual, combined regular simultaneous + injected simultaneous mode",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Independent",
+                    description: Some(
+                        "Independent mode",
+                    ),
+                    value: 0,
                 },
             ],
         },

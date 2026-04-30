@@ -1520,6 +1520,44 @@
               "dma": "LPDMA1",
               "request": 9
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -1699,6 +1737,42 @@
               "request": 86
             }
           ]
+        },
+        {
+          "name": "DLYB_OCTOSPI1",
+          "address": 1108144128,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
+          "name": "DLYB_OCTOSPI2",
+          "address": 1108145152,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
+          "name": "DLYB_SDMMC1",
+          "address": 1108116480,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
+          "name": "DLYB_SDMMC2",
+          "address": 1108117504,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
         },
         {
           "name": "DMA2D",
@@ -2380,6 +2454,65 @@
         },
         {
           "name": "GTZC",
+          "address": 1073947648,
+          "registers": {
+            "kind": "gtzc",
+            "version": "v1",
+            "block": "GTZC1_TZSC"
+          }
+        },
+        {
+          "name": "GTZC_MPCBB1",
+          "address": 1073949696,
+          "registers": {
+            "kind": "gtzc",
+            "version": "v1",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_MPCBB2",
+          "address": 1073950720,
+          "registers": {
+            "kind": "gtzc",
+            "version": "v1",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_MPCBB3",
+          "address": 1073951744,
+          "registers": {
+            "kind": "gtzc",
+            "version": "v1",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_TZIC",
+          "address": 1073948672,
+          "registers": {
+            "kind": "gtzc",
+            "version": "v1",
+            "block": "TZIC"
+          },
+          "interrupts": [
+            {
+              "signal": "GLOBAL",
+              "interrupt": "GTZC"
+            },
+            {
+              "signal": "GTZC",
+              "interrupt": "GTZC"
+            },
+            {
+              "signal": "ILA",
+              "interrupt": "GTZC"
+            }
+          ]
+        },
+        {
+          "name": "GTZC_TZSC",
           "address": 1073947648,
           "registers": {
             "kind": "gtzc",
@@ -3835,6 +3968,18 @@
             "version": "v1",
             "block": "PSSI"
           },
+          "rcc": {
+            "bus_clock": "HCLK2",
+            "kernel_clock": "HCLK2",
+            "enable": {
+              "register": "AHB2ENR1",
+              "field": "DCMIEN"
+            },
+            "reset": {
+              "register": "AHB2RSTR1",
+              "field": "DCMIRST"
+            }
+          },
           "pins": [
             {
               "pin": "PA10",
@@ -4189,6 +4334,10 @@
             {
               "signal": "GLOBAL",
               "interrupt": "RCC"
+            },
+            {
+              "signal": "RCC",
+              "interrupt": "RCC_S"
             }
           ]
         },
@@ -4264,23 +4413,23 @@
           "interrupts": [
             {
               "signal": "ALARM",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "SSRU",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "STAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "TAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "WKUP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             }
           ]
         },

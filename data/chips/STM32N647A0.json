@@ -1466,6 +1466,11 @@
         {
           "name": "CSI",
           "address": 1207984128,
+          "registers": {
+            "kind": "csi",
+            "version": "v1",
+            "block": "CSI"
+          },
           "rcc": {
             "bus_clock": "PCLK5",
             "kernel_clock": "PCLK5",
@@ -1477,7 +1482,13 @@
               "register": "APB5RSTR",
               "field": "CSIRST"
             }
-          }
+          },
+          "interrupts": [
+            {
+              "signal": "GLOBAL",
+              "interrupt": "CSI"
+            }
+          ]
         },
         {
           "name": "DBGMCU",
@@ -1497,18 +1508,18 @@
             "block": "DCMI"
           },
           "rcc": {
-            "bus_clock": "PCLK5",
+            "bus_clock": "HCLK5",
             "kernel_clock": {
-              "register": "CCIPR1",
-              "field": "DCMISEL"
+              "register": "CCIPR7",
+              "field": "PSSISEL"
             },
             "enable": {
-              "register": "APB5ENR",
-              "field": "DCMIEN"
+              "register": "AHB5ENR",
+              "field": "PSSIEN"
             },
             "reset": {
-              "register": "APB5RSTR",
-              "field": "DCMIRST"
+              "register": "AHB5RSTR",
+              "field": "PSSIRST"
             }
           },
           "pins": [
@@ -1710,6 +1721,26 @@
         {
           "name": "DCMIPP",
           "address": 1207967744,
+          "registers": {
+            "kind": "dcmipp",
+            "version": "v2",
+            "block": "DCMIPP"
+          },
+          "rcc": {
+            "bus_clock": "PCLK5",
+            "kernel_clock": {
+              "register": "CCIPR1",
+              "field": "DCMIPPSEL"
+            },
+            "enable": {
+              "register": "APB5ENR",
+              "field": "DCMIPPEN"
+            },
+            "reset": {
+              "register": "APB5RSTR",
+              "field": "DCMIPPRST"
+            }
+          },
           "pins": [
             {
               "pin": "PA1",
@@ -1918,10 +1949,6 @@
             }
           ],
           "interrupts": [
-            {
-              "signal": "CSI",
-              "interrupt": "CSI"
-            },
             {
               "signal": "GLOBAL",
               "interrupt": "DCMIPP"
@@ -3484,7 +3511,10 @@
           "address": 1174414336,
           "rcc": {
             "bus_clock": "PCLK4",
-            "kernel_clock": "PCLK4",
+            "kernel_clock": {
+              "register": "CCIPR12",
+              "field": "LPTIM2SEL"
+            },
             "enable": {
               "register": "APB4LENR",
               "field": "LPTIM2EN"
@@ -3579,9 +3609,17 @@
         {
           "name": "LPUART1",
           "address": 1174408192,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "LPUART"
+          },
           "rcc": {
             "bus_clock": "PCLK4",
-            "kernel_clock": "PCLK4",
+            "kernel_clock": {
+              "register": "CCIPR14",
+              "field": "LPUART1SEL"
+            },
             "enable": {
               "register": "APB4LENR",
               "field": "LPUART1EN"
@@ -3651,6 +3689,11 @@
         {
           "name": "LTDC",
           "address": 1207963648,
+          "registers": {
+            "kind": "ltdc",
+            "version": "v1_3",
+            "block": "LTDC"
+          },
           "rcc": {
             "bus_clock": "PCLK5",
             "kernel_clock": {
@@ -3860,12 +3903,16 @@
           ],
           "interrupts": [
             {
-              "signal": "ERR",
+              "signal": "ER",
               "interrupt": "LTDC_LO_ERR"
             },
             {
               "signal": "LO",
               "interrupt": "LTDC_LO"
+            },
+            {
+              "signal": "UP",
+              "interrupt": "LTDC_UP"
             }
           ]
         },
@@ -4466,8 +4513,16 @@
           ],
           "interrupts": [
             {
+              "signal": "CRS",
+              "interrupt": "RCC_S"
+            },
+            {
               "signal": "GLOBAL",
               "interrupt": "RCC"
+            },
+            {
+              "signal": "RCC",
+              "interrupt": "RCC_S"
             }
           ]
         },
@@ -4695,23 +4750,23 @@
           "interrupts": [
             {
               "signal": "ALARM",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "SSRU",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "STAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "TAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "WKUP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             }
           ]
         },
@@ -6985,7 +7040,7 @@
           "address": 1107315712,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH"
           },
           "rcc": {
@@ -7043,9 +7098,17 @@
         {
           "name": "UART4",
           "address": 1073761280,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK1",
-            "kernel_clock": "PCLK1",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "UART4SEL"
+            },
             "enable": {
               "register": "APB1LENR",
               "field": "UART4EN"
@@ -7144,9 +7207,17 @@
         {
           "name": "UART5",
           "address": 1073762304,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK1",
-            "kernel_clock": "PCLK1",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "UART5SEL"
+            },
             "enable": {
               "register": "APB1LENR",
               "field": "UART5EN"
@@ -7235,9 +7306,17 @@
         {
           "name": "UART7",
           "address": 1073772544,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK1",
-            "kernel_clock": "PCLK1",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "UART7SEL"
+            },
             "enable": {
               "register": "APB1LENR",
               "field": "UART7EN"
@@ -7416,9 +7495,17 @@
         {
           "name": "USART1",
           "address": 1107300352,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK2",
-            "kernel_clock": "PCLK2",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "USART1SEL"
+            },
             "enable": {
               "register": "APB2ENR",
               "field": "USART1EN"
@@ -7522,9 +7609,17 @@
         {
           "name": "USART3",
           "address": 1073760256,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK1",
-            "kernel_clock": "PCLK1",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "USART3SEL"
+            },
             "enable": {
               "register": "APB1LENR",
               "field": "USART3EN"
@@ -7653,9 +7748,17 @@
         {
           "name": "USART6",
           "address": 1107301376,
+          "registers": {
+            "kind": "usart",
+            "version": "v4",
+            "block": "USART"
+          },
           "rcc": {
             "bus_clock": "PCLK2",
-            "kernel_clock": "PCLK2",
+            "kernel_clock": {
+              "register": "CCIPR13",
+              "field": "USART6SEL"
+            },
             "enable": {
               "register": "APB2ENR",
               "field": "USART6EN"

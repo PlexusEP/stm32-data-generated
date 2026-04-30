@@ -966,6 +966,40 @@
               "dma": "GPDMA2",
               "request": 3
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -975,6 +1009,24 @@
             "kind": "dbgmcu",
             "version": "h5",
             "block": "DBGMCU"
+          }
+        },
+        {
+          "name": "DLYB_OCTOSPI1",
+          "address": 1174466560,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
+          "name": "DLYB_SDMMC1",
+          "address": 1174438912,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
           }
         },
         {
@@ -1427,6 +1479,18 @@
             "version": "h503",
             "block": "GTZC1"
           }
+        },
+        {
+          "name": "GTZC_MPCBB1",
+          "address": 1073949696
+        },
+        {
+          "name": "GTZC_MPCBB2",
+          "address": 1073950720
+        },
+        {
+          "name": "GTZC_TZSC",
+          "address": 1073947648
         },
         {
           "name": "HASH",

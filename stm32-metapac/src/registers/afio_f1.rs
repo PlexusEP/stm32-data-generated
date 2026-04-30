@@ -418,29 +418,29 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 3,
         variants: &[
             EnumVariant {
-                name: "RESET",
-                description: Some("Full SWJ (JTAG-DP + SW-DP) (Reset state)"),
-                value: 0,
-            },
-            EnumVariant {
-                name: "NO_JNT_RST",
-                description: Some("Full SWJ (JTAG-DP + SW-DP) but without NJTRST"),
-                value: 1,
-            },
-            EnumVariant {
-                name: "JTAG_DISABLE",
-                description: Some("JTAG-DP Disabled and SW-DP Enabled"),
-                value: 2,
-            },
-            EnumVariant {
-                name: "DISABLE",
+                name: "Disable",
                 description: Some("JTAG-DP Disabled and SW-DP Disabled"),
                 value: 4,
             },
             EnumVariant {
-                name: "NO_OP",
+                name: "JtagDisable",
+                description: Some("JTAG-DP Disabled and SW-DP Enabled"),
+                value: 2,
+            },
+            EnumVariant {
+                name: "NoJntRst",
+                description: Some("Full SWJ (JTAG-DP + SW-DP) but without NJTRST"),
+                value: 1,
+            },
+            EnumVariant {
+                name: "NoOp",
                 description: Some("Sets all bits to 1, indicating that the configuration should remain unchanged"),
                 value: 7,
+            },
+            EnumVariant {
+                name: "Reset",
+                description: Some("Full SWJ (JTAG-DP + SW-DP) (Reset state)"),
+                value: 0,
             },
         ],
     }],

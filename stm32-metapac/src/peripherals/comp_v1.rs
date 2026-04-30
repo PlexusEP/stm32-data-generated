@@ -22,7 +22,7 @@ impl Comp {
     #[doc = "Comparator control and status register."]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
 }
 pub mod regs {
@@ -32,6 +32,7 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "COMP enable bit."]
+        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -39,21 +40,23 @@ pub mod regs {
         }
         #[doc = "COMP enable bit."]
         #[inline(always)]
-        pub fn set_en(&mut self, val: bool) {
+        pub const fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Comparator signal selector for inverting input INM."]
+        #[must_use]
         #[inline(always)]
-        pub const fn inmsel(&self) -> u8 {
+        pub const fn inmsel(&self) -> super::vals::Inm {
             let val = (self.0 >> 4usize) & 0x0f;
-            val as u8
+            super::vals::Inm::from_bits(val as u8)
         }
         #[doc = "Comparator signal selector for inverting input INM."]
         #[inline(always)]
-        pub fn set_inmsel(&mut self, val: u8) {
-            self.0 = (self.0 & !(0x0f << 4usize)) | (((val as u32) & 0x0f) << 4usize);
+        pub const fn set_inmsel(&mut self, val: super::vals::Inm) {
+            self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
         }
         #[doc = "Comparator signal selector for non-inverting input INP."]
+        #[must_use]
         #[inline(always)]
         pub const fn inpsel(&self) -> u8 {
             let val = (self.0 >> 8usize) & 0x03;
@@ -61,32 +64,35 @@ pub mod regs {
         }
         #[doc = "Comparator signal selector for non-inverting input INP."]
         #[inline(always)]
-        pub fn set_inpsel(&mut self, val: u8) {
+        pub const fn set_inpsel(&mut self, val: u8) {
             self.0 = (self.0 & !(0x03 << 8usize)) | (((val as u32) & 0x03) << 8usize);
         }
         #[doc = "Comparator non-inverting input selector for window mode."]
+        #[must_use]
         #[inline(always)]
-        pub const fn winmode(&self) -> bool {
+        pub const fn winmode(&self) -> super::vals::WindowMode {
             let val = (self.0 >> 11usize) & 0x01;
-            val != 0
+            super::vals::WindowMode::from_bits(val as u8)
         }
         #[doc = "Comparator non-inverting input selector for window mode."]
         #[inline(always)]
-        pub fn set_winmode(&mut self, val: bool) {
-            self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
+        pub const fn set_winmode(&mut self, val: super::vals::WindowMode) {
+            self.0 = (self.0 & !(0x01 << 11usize)) | (((val.to_bits() as u32) & 0x01) << 11usize);
         }
         #[doc = "Comparator output selector."]
+        #[must_use]
         #[inline(always)]
-        pub const fn winout(&self) -> bool {
+        pub const fn winout(&self) -> super::vals::WindowOut {
             let val = (self.0 >> 14usize) & 0x01;
-            val != 0
+            super::vals::WindowOut::from_bits(val as u8)
         }
         #[doc = "Comparator output selector."]
         #[inline(always)]
-        pub fn set_winout(&mut self, val: bool) {
-            self.0 = (self.0 & !(0x01 << 14usize)) | (((val as u32) & 0x01) << 14usize);
+        pub const fn set_winout(&mut self, val: super::vals::WindowOut) {
+            self.0 = (self.0 & !(0x01 << 14usize)) | (((val.to_bits() as u32) & 0x01) << 14usize);
         }
         #[doc = "Comparator polarity selector."]
+        #[must_use]
         #[inline(always)]
         pub const fn polarity(&self) -> super::vals::Polarity {
             let val = (self.0 >> 15usize) & 0x01;
@@ -94,54 +100,59 @@ pub mod regs {
         }
         #[doc = "Comparator polarity selector."]
         #[inline(always)]
-        pub fn set_polarity(&mut self, val: super::vals::Polarity) {
+        pub const fn set_polarity(&mut self, val: super::vals::Polarity) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
         #[doc = "Comparator hysteresis selector."]
+        #[must_use]
         #[inline(always)]
-        pub const fn hyst(&self) -> super::vals::Hyst {
+        pub const fn hyst(&self) -> super::vals::Hysteresis {
             let val = (self.0 >> 16usize) & 0x03;
-            super::vals::Hyst::from_bits(val as u8)
+            super::vals::Hysteresis::from_bits(val as u8)
         }
         #[doc = "Comparator hysteresis selector."]
         #[inline(always)]
-        pub fn set_hyst(&mut self, val: super::vals::Hyst) {
+        pub const fn set_hyst(&mut self, val: super::vals::Hysteresis) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "Comparator power mode selector."]
+        #[must_use]
         #[inline(always)]
-        pub const fn pwrmode(&self) -> super::vals::Pwrmode {
+        pub const fn pwrmode(&self) -> super::vals::PowerMode {
             let val = (self.0 >> 18usize) & 0x03;
-            super::vals::Pwrmode::from_bits(val as u8)
+            super::vals::PowerMode::from_bits(val as u8)
         }
         #[doc = "Comparator power mode selector."]
         #[inline(always)]
-        pub fn set_pwrmode(&mut self, val: super::vals::Pwrmode) {
+        pub const fn set_pwrmode(&mut self, val: super::vals::PowerMode) {
             self.0 = (self.0 & !(0x03 << 18usize)) | (((val.to_bits() as u32) & 0x03) << 18usize);
         }
         #[doc = "Comparator blanking source selector."]
+        #[must_use]
         #[inline(always)]
-        pub const fn blanksel(&self) -> super::vals::Blanksel {
+        pub const fn blanksel(&self) -> super::vals::Blanking {
             let val = (self.0 >> 20usize) & 0x1f;
-            super::vals::Blanksel::from_bits(val as u8)
+            super::vals::Blanking::from_bits(val as u8)
         }
         #[doc = "Comparator blanking source selector."]
         #[inline(always)]
-        pub fn set_blanksel(&mut self, val: super::vals::Blanksel) {
+        pub const fn set_blanksel(&mut self, val: super::vals::Blanking) {
             self.0 = (self.0 & !(0x1f << 20usize)) | (((val.to_bits() as u32) & 0x1f) << 20usize);
         }
         #[doc = "Comparator output status. (READ ONLY)"]
+        #[must_use]
         #[inline(always)]
-        pub const fn value_do_not_set(&self) -> bool {
+        pub const fn value(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
             val != 0
         }
         #[doc = "Comparator output status. (READ ONLY)"]
         #[inline(always)]
-        pub fn set_value_do_not_set(&mut self, val: bool) {
+        pub const fn set_value(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "CSR register lock."]
+        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -149,7 +160,7 @@ pub mod regs {
         }
         #[doc = "CSR register lock."]
         #[inline(always)]
-        pub fn set_lock(&mut self, val: bool) {
+        pub const fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -171,7 +182,7 @@ pub mod regs {
                 .field("hyst", &self.hyst())
                 .field("pwrmode", &self.pwrmode())
                 .field("blanksel", &self.blanksel())
-                .field("value_do_not_set", &self.value_do_not_set())
+                .field("value", &self.value())
                 .field("lock", &self.lock())
                 .finish()
         }
@@ -179,7 +190,7 @@ pub mod regs {
     #[cfg(feature = "defmt")]
     impl defmt::Format for Csr {
         fn format(&self, f: defmt::Formatter) {
-            defmt :: write ! (f , "Csr {{ en: {=bool:?}, inmsel: {=u8:?}, inpsel: {=u8:?}, winmode: {=bool:?}, winout: {=bool:?}, polarity: {:?}, hyst: {:?}, pwrmode: {:?}, blanksel: {:?}, value_do_not_set: {=bool:?}, lock: {=bool:?} }}" , self . en () , self . inmsel () , self . inpsel () , self . winmode () , self . winout () , self . polarity () , self . hyst () , self . pwrmode () , self . blanksel () , self . value_do_not_set () , self . lock ())
+            defmt :: write ! (f , "Csr {{ en: {=bool:?}, inmsel: {:?}, inpsel: {=u8:?}, winmode: {:?}, winout: {:?}, polarity: {:?}, hyst: {:?}, pwrmode: {:?}, blanksel: {:?}, value: {=bool:?}, lock: {=bool:?} }}" , self . en () , self . inmsel () , self . inpsel () , self . winmode () , self . winout () , self . polarity () , self . hyst () , self . pwrmode () , self . blanksel () , self . value () , self . lock ())
         }
     }
 }
@@ -187,20 +198,21 @@ pub mod vals {
     #[repr(u8)]
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-    pub enum Blanksel {
-        NONE = 0x0,
-        #[doc = "TIM1 OC4"]
-        TIM1OC4 = 0x01,
-        #[doc = "TIM1 OC5"]
-        TIM1OC5 = 0x02,
+    pub enum Blanking {
+        #[doc = "No blanking."]
+        NoBlanking = 0x0,
+        #[doc = "Check data sheet for blanking options"]
+        Blank1 = 0x01,
+        #[doc = "Check data sheet for blanking options"]
+        Blank2 = 0x02,
         _RESERVED_3 = 0x03,
-        #[doc = "TIM2 OC3"]
-        TIM2OC3 = 0x04,
+        #[doc = "Check data sheet for blanking options"]
+        Blank3 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
-        #[doc = "TIM3 OC3"]
-        TIM3OC3 = 0x08,
+        #[doc = "Check data sheet for blanking options"]
+        Blank4 = 0x08,
         _RESERVED_9 = 0x09,
         _RESERVED_a = 0x0a,
         _RESERVED_b = 0x0b,
@@ -208,8 +220,8 @@ pub mod vals {
         _RESERVED_d = 0x0d,
         _RESERVED_e = 0x0e,
         _RESERVED_f = 0x0f,
-        #[doc = "TIM15 OC2"]
-        TIM15OC2 = 0x10,
+        #[doc = "Check data sheet for blanking options"]
+        Blank5 = 0x10,
         _RESERVED_11 = 0x11,
         _RESERVED_12 = 0x12,
         _RESERVED_13 = 0x13,
@@ -226,9 +238,9 @@ pub mod vals {
         _RESERVED_1e = 0x1e,
         _RESERVED_1f = 0x1f,
     }
-    impl Blanksel {
+    impl Blanking {
         #[inline(always)]
-        pub const fn from_bits(val: u8) -> Blanksel {
+        pub const fn from_bits(val: u8) -> Blanking {
             unsafe { core::mem::transmute(val & 0x1f) }
         }
         #[inline(always)]
@@ -236,30 +248,30 @@ pub mod vals {
             unsafe { core::mem::transmute(self) }
         }
     }
-    impl From<u8> for Blanksel {
+    impl From<u8> for Blanking {
         #[inline(always)]
-        fn from(val: u8) -> Blanksel {
-            Blanksel::from_bits(val)
+        fn from(val: u8) -> Blanking {
+            Blanking::from_bits(val)
         }
     }
-    impl From<Blanksel> for u8 {
+    impl From<Blanking> for u8 {
         #[inline(always)]
-        fn from(val: Blanksel) -> u8 {
-            Blanksel::to_bits(val)
+        fn from(val: Blanking) -> u8 {
+            Blanking::to_bits(val)
         }
     }
     #[repr(u8)]
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-    pub enum Hyst {
-        NONE = 0x0,
-        LOW = 0x01,
-        MEDIUM = 0x02,
-        HIGH = 0x03,
+    pub enum Hysteresis {
+        None = 0x0,
+        Low = 0x01,
+        Medium = 0x02,
+        High = 0x03,
     }
-    impl Hyst {
+    impl Hysteresis {
         #[inline(always)]
-        pub const fn from_bits(val: u8) -> Hyst {
+        pub const fn from_bits(val: u8) -> Hysteresis {
             unsafe { core::mem::transmute(val & 0x03) }
         }
         #[inline(always)]
@@ -267,24 +279,76 @@ pub mod vals {
             unsafe { core::mem::transmute(self) }
         }
     }
-    impl From<u8> for Hyst {
+    impl From<u8> for Hysteresis {
         #[inline(always)]
-        fn from(val: u8) -> Hyst {
-            Hyst::from_bits(val)
+        fn from(val: u8) -> Hysteresis {
+            Hysteresis::from_bits(val)
         }
     }
-    impl From<Hyst> for u8 {
+    impl From<Hysteresis> for u8 {
         #[inline(always)]
-        fn from(val: Hyst) -> u8 {
-            Hyst::to_bits(val)
+        fn from(val: Hysteresis) -> u8 {
+            Hysteresis::to_bits(val)
+        }
+    }
+    #[repr(u8)]
+    #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+    #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+    pub enum Inm {
+        #[doc = "Inverting input set to 1/4 VRef"]
+        QuarterVRef = 0x0,
+        #[doc = "Inverting input set to 1/2 VRef"]
+        HalfVRef = 0x01,
+        #[doc = "Inverting input set to 3/4 VRef"]
+        ThreeQuarterVRef = 0x02,
+        #[doc = "Inverting input set to VRef"]
+        VRef = 0x03,
+        #[doc = "Inverting input set to DAC1 output"]
+        Dac1 = 0x04,
+        #[doc = "Inverting input set to DAC2 output"]
+        Dac2 = 0x05,
+        #[doc = "Inverting input set to IO1"]
+        Inm1 = 0x06,
+        #[doc = "Inverting input set to IO2"]
+        Inm2 = 0x07,
+        #[doc = "Inverting input set to IO3"]
+        Inm3 = 0x08,
+        _RESERVED_9 = 0x09,
+        _RESERVED_a = 0x0a,
+        _RESERVED_b = 0x0b,
+        _RESERVED_c = 0x0c,
+        _RESERVED_d = 0x0d,
+        _RESERVED_e = 0x0e,
+        _RESERVED_f = 0x0f,
+    }
+    impl Inm {
+        #[inline(always)]
+        pub const fn from_bits(val: u8) -> Inm {
+            unsafe { core::mem::transmute(val & 0x0f) }
+        }
+        #[inline(always)]
+        pub const fn to_bits(self) -> u8 {
+            unsafe { core::mem::transmute(self) }
+        }
+    }
+    impl From<u8> for Inm {
+        #[inline(always)]
+        fn from(val: u8) -> Inm {
+            Inm::from_bits(val)
+        }
+    }
+    impl From<Inm> for u8 {
+        #[inline(always)]
+        fn from(val: Inm) -> u8 {
+            Inm::to_bits(val)
         }
     }
     #[repr(u8)]
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Polarity {
-        NON_INVERTED = 0x0,
-        INVERTED = 0x01,
+        NotInverted = 0x0,
+        Inverted = 0x01,
     }
     impl Polarity {
         #[inline(always)]
@@ -311,15 +375,15 @@ pub mod vals {
     #[repr(u8)]
     #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-    pub enum Pwrmode {
-        HIGH_SPEED = 0x0,
-        MEDIUM_SPEED = 0x01,
+    pub enum PowerMode {
+        HighSpeed = 0x0,
+        MediumSpeed = 0x01,
         _RESERVED_2 = 0x02,
         _RESERVED_3 = 0x03,
     }
-    impl Pwrmode {
+    impl PowerMode {
         #[inline(always)]
-        pub const fn from_bits(val: u8) -> Pwrmode {
+        pub const fn from_bits(val: u8) -> PowerMode {
             unsafe { core::mem::transmute(val & 0x03) }
         }
         #[inline(always)]
@@ -327,16 +391,80 @@ pub mod vals {
             unsafe { core::mem::transmute(self) }
         }
     }
-    impl From<u8> for Pwrmode {
+    impl From<u8> for PowerMode {
         #[inline(always)]
-        fn from(val: u8) -> Pwrmode {
-            Pwrmode::from_bits(val)
+        fn from(val: u8) -> PowerMode {
+            PowerMode::from_bits(val)
         }
     }
-    impl From<Pwrmode> for u8 {
+    impl From<PowerMode> for u8 {
         #[inline(always)]
-        fn from(val: Pwrmode) -> u8 {
-            Pwrmode::to_bits(val)
+        fn from(val: PowerMode) -> u8 {
+            PowerMode::to_bits(val)
+        }
+    }
+    #[repr(u8)]
+    #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+    #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+    pub enum WindowMode {
+        #[doc = "Signal selected with INPSEL\\[1:0\\]
+bitfield of this register."]
+        ThisInpsel = 0x0,
+        #[doc = "Signal selected with INPSEL\\[1:0\\]
+bitfield of the other register (required for window mode)."]
+        OtherInpsel = 0x01,
+    }
+    impl WindowMode {
+        #[inline(always)]
+        pub const fn from_bits(val: u8) -> WindowMode {
+            unsafe { core::mem::transmute(val & 0x01) }
+        }
+        #[inline(always)]
+        pub const fn to_bits(self) -> u8 {
+            unsafe { core::mem::transmute(self) }
+        }
+    }
+    impl From<u8> for WindowMode {
+        #[inline(always)]
+        fn from(val: u8) -> WindowMode {
+            WindowMode::from_bits(val)
+        }
+    }
+    impl From<WindowMode> for u8 {
+        #[inline(always)]
+        fn from(val: WindowMode) -> u8 {
+            WindowMode::to_bits(val)
+        }
+    }
+    #[repr(u8)]
+    #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+    #[cfg_attr(feature = "defmt", derive(defmt::Format))]
+    pub enum WindowOut {
+        #[doc = "Comparator 1 value."]
+        Comp1Value = 0x0,
+        #[doc = "Comparator 1 value XOR comparator 2 value (required for window mode)."]
+        Comp1ValueXorComp2Value = 0x01,
+    }
+    impl WindowOut {
+        #[inline(always)]
+        pub const fn from_bits(val: u8) -> WindowOut {
+            unsafe { core::mem::transmute(val & 0x01) }
+        }
+        #[inline(always)]
+        pub const fn to_bits(self) -> u8 {
+            unsafe { core::mem::transmute(self) }
+        }
+    }
+    impl From<u8> for WindowOut {
+        #[inline(always)]
+        fn from(val: u8) -> WindowOut {
+            WindowOut::from_bits(val)
+        }
+    }
+    impl From<WindowOut> for u8 {
+        #[inline(always)]
+        fn from(val: WindowOut) -> u8 {
+            WindowOut::to_bits(val)
         }
     }
 }

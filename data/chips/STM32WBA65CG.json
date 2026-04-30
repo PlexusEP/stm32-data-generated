@@ -381,7 +381,8 @@
             "reset": {
               "register": "AHB4RSTR",
               "field": "ADC4RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -489,7 +490,8 @@
             "reset": {
               "register": "APB7RSTR",
               "field": "COMPRST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -867,6 +869,65 @@
           }
         },
         {
+          "name": "GTZC_MPCBB1",
+          "address": 1073949696,
+          "registers": {
+            "kind": "gtzc",
+            "version": "wba",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_MPCBB2",
+          "address": 1073950720,
+          "registers": {
+            "kind": "gtzc",
+            "version": "wba",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_MPCBB6",
+          "address": 1073954816,
+          "registers": {
+            "kind": "gtzc",
+            "version": "wba",
+            "block": "MPCBB"
+          }
+        },
+        {
+          "name": "GTZC_TZIC",
+          "address": 1342384128,
+          "registers": {
+            "kind": "gtzc",
+            "version": "wba",
+            "block": "TZIC"
+          },
+          "interrupts": [
+            {
+              "signal": "GLOBAL",
+              "interrupt": "GTZC"
+            },
+            {
+              "signal": "GTZC",
+              "interrupt": "GTZC"
+            },
+            {
+              "signal": "ILA",
+              "interrupt": "GTZC"
+            }
+          ]
+        },
+        {
+          "name": "GTZC_TZSC",
+          "address": 1073947648,
+          "registers": {
+            "kind": "gtzc",
+            "version": "wba",
+            "block": "GTZC_TZSC"
+          }
+        },
+        {
           "name": "HASH",
           "address": 1108083712,
           "registers": {
@@ -903,6 +964,11 @@
         {
           "name": "HSEM",
           "address": 1108089856,
+          "registers": {
+            "kind": "hsem",
+            "version": "wba",
+            "block": "HSEM"
+          },
           "rcc": {
             "bus_clock": "HCLK2",
             "kernel_clock": "HCLK2",
@@ -919,6 +985,10 @@
             {
               "signal": "GLOBAL",
               "interrupt": "HSEM"
+            },
+            {
+              "signal": "HSEM_S",
+              "interrupt": "HSEM_S"
             }
           ]
         },
@@ -943,7 +1013,8 @@
             "reset": {
               "register": "APB1RSTR1",
               "field": "I2C1RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -1021,7 +1092,8 @@
             "reset": {
               "register": "APB7RSTR",
               "field": "I2C3RST"
-            }
+            },
+            "stop_mode": "Standby"
           },
           "pins": [
             {
@@ -1130,7 +1202,7 @@
               "register": "APB7RSTR",
               "field": "LPTIM1RST"
             },
-            "stop_mode": "Stop2"
+            "stop_mode": "Standby"
           },
           "pins": [
             {
@@ -1275,7 +1347,7 @@
               "register": "APB7RSTR",
               "field": "LPUART1RST"
             },
-            "stop_mode": "Stop2"
+            "stop_mode": "Standby"
           },
           "pins": [
             {
@@ -1490,8 +1562,16 @@
           ],
           "interrupts": [
             {
+              "signal": "CRS",
+              "interrupt": "RCC_S"
+            },
+            {
               "signal": "GLOBAL",
               "interrupt": "RCC"
+            },
+            {
+              "signal": "RCC",
+              "interrupt": "RCC_S"
             }
           ]
         },
@@ -1567,23 +1647,23 @@
           "interrupts": [
             {
               "signal": "ALARM",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "SSRU",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "STAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "TAMP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             },
             {
               "signal": "WKUP",
-              "interrupt": "RTC"
+              "interrupt": "RTC_S"
             }
           ]
         },
@@ -1755,7 +1835,8 @@
             "reset": {
               "register": "APB2RSTR",
               "field": "SPI1RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -1829,7 +1910,8 @@
             "reset": {
               "register": "APB7RSTR",
               "field": "SPI3RST"
-            }
+            },
+            "stop_mode": "Standby"
           },
           "pins": [
             {
@@ -2673,7 +2755,8 @@
             "reset": {
               "register": "APB2RSTR",
               "field": "USART1RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -2767,7 +2850,8 @@
             "reset": {
               "register": "APB1RSTR1",
               "field": "USART2RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {
@@ -2886,7 +2970,8 @@
             "reset": {
               "register": "APB1RSTR1",
               "field": "USART3RST"
-            }
+            },
+            "stop_mode": "Stop2"
           },
           "pins": [
             {

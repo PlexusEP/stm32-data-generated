@@ -444,7 +444,9 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: None,
+                    enumm: Some(
+                        "Retention",
+                    ),
                 },
                 Field {
                     name: "monen",
@@ -893,24 +895,45 @@ pub(crate) static REGISTERS: IR = IR {
     ],
     enums: &[
         Enum {
+            name: "Retention",
+            description: None,
+            bit_size: 1,
+            variants: &[
+                EnumVariant {
+                    name: "Lost",
+                    description: Some(
+                        "Content is lost.",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Preserved",
+                    description: Some(
+                        "Content is preserved.",
+                    ),
+                    value: 1,
+                },
+            ],
+        },
+        Enum {
             name: "Vos",
             description: None,
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "SCALE3",
+                    name: "Scale1",
                     description: None,
-                    value: 1,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "SCALE2",
+                    name: "Scale2",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "SCALE1",
+                    name: "Scale3",
                     description: None,
-                    value: 3,
+                    value: 1,
                 },
             ],
         },
@@ -920,25 +943,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "NO_PULL",
+                    name: "NoPull",
                     description: Some(
                         "No pull-up.",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "PULL_UP",
-                    description: Some(
-                        "Pull-up.",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "PULL_DOWN",
+                    name: "PullDown",
                     description: Some(
                         "Pull-down.",
                     ),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "PullUp",
+                    description: Some(
+                        "Pull-up.",
+                    ),
+                    value: 1,
                 },
             ],
         },

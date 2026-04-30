@@ -556,18 +556,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "STANDARD",
-                    description: Some(
-                        "Standard",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FMP",
+                    name: "Fmp",
                     description: Some(
                         "FM+",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Standard",
+                    description: Some(
+                        "Standard",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -577,21 +577,21 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "TIM16",
+                    name: "Tim16",
                     description: Some(
                         "TIM16 selected",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "USART1",
+                    name: "Usart1",
                     description: Some(
                         "USART1 selected",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "USART4",
+                    name: "Usart4",
                     description: Some(
                         "USART4 selected",
                     ),
@@ -605,32 +605,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "MAIN_FLASH",
+                    name: "MainFlash",
                     description: Some(
                         "Main Flash memory mapped at 0x0000_0000",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SYSTEM_FLASH",
-                    description: Some(
-                        "System Flash memory mapped at 0x0000_0000",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "MAIN_FLASH2",
+                    name: "MainFlash2",
                     description: Some(
                         "Main Flash memory mapped at 0x0000_0000",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "SRAM",
+                    name: "Sram",
                     description: Some(
                         "Embedded SRAM mapped at 0x0000_0000",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "SystemFlash",
+                    description: Some(
+                        "System Flash memory mapped at 0x0000_0000",
+                    ),
+                    value: 1,
                 },
             ],
         },

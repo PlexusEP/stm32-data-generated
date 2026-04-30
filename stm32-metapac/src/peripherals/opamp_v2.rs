@@ -22,7 +22,7 @@ impl Opamp {
     #[doc = "Control/status register"]
     #[inline(always)]
     pub const fn csr(self) -> crate::common::Reg<regs::Csr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
 }
 pub mod regs {
@@ -32,6 +32,7 @@ pub mod regs {
     pub struct Csr(pub u32);
     impl Csr {
         #[doc = "Enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn opampen(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -39,10 +40,11 @@ pub mod regs {
         }
         #[doc = "Enable"]
         #[inline(always)]
-        pub fn set_opampen(&mut self, val: bool) {
+        pub const fn set_opampen(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Force internal reference on VP (reserved for test)"]
+        #[must_use]
         #[inline(always)]
         pub const fn force_vp(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -50,10 +52,11 @@ pub mod regs {
         }
         #[doc = "Force internal reference on VP (reserved for test)"]
         #[inline(always)]
-        pub fn set_force_vp(&mut self, val: bool) {
+        pub const fn set_force_vp(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Non-inverting input selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn vp_sel(&self) -> super::vals::VpSel {
             let val = (self.0 >> 2usize) & 0x03;
@@ -61,10 +64,11 @@ pub mod regs {
         }
         #[doc = "Non-inverting input selection"]
         #[inline(always)]
-        pub fn set_vp_sel(&mut self, val: super::vals::VpSel) {
+        pub const fn set_vp_sel(&mut self, val: super::vals::VpSel) {
             self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
         }
         #[doc = "Inverting input selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn vm_sel(&self) -> super::vals::VmSel {
             let val = (self.0 >> 5usize) & 0x03;
@@ -72,10 +76,11 @@ pub mod regs {
         }
         #[doc = "Inverting input selection"]
         #[inline(always)]
-        pub fn set_vm_sel(&mut self, val: super::vals::VmSel) {
+        pub const fn set_vm_sel(&mut self, val: super::vals::VmSel) {
             self.0 = (self.0 & !(0x03 << 5usize)) | (((val.to_bits() as u32) & 0x03) << 5usize);
         }
         #[doc = "Timer controlled Mux mode enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn tcm_en(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -83,10 +88,11 @@ pub mod regs {
         }
         #[doc = "Timer controlled Mux mode enable"]
         #[inline(always)]
-        pub fn set_tcm_en(&mut self, val: bool) {
+        pub const fn set_tcm_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
         #[doc = "Inverting input secondary selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn vms_sel(&self) -> super::vals::VmsSel {
             let val = (self.0 >> 8usize) & 0x01;
@@ -94,10 +100,11 @@ pub mod regs {
         }
         #[doc = "Inverting input secondary selection"]
         #[inline(always)]
-        pub fn set_vms_sel(&mut self, val: super::vals::VmsSel) {
+        pub const fn set_vms_sel(&mut self, val: super::vals::VmsSel) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val.to_bits() as u32) & 0x01) << 8usize);
         }
         #[doc = "Non-inverting input secondary selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn vps_sel(&self) -> super::vals::VpsSel {
             let val = (self.0 >> 9usize) & 0x03;
@@ -105,10 +112,11 @@ pub mod regs {
         }
         #[doc = "Non-inverting input secondary selection"]
         #[inline(always)]
-        pub fn set_vps_sel(&mut self, val: super::vals::VpsSel) {
+        pub const fn set_vps_sel(&mut self, val: super::vals::VpsSel) {
             self.0 = (self.0 & !(0x03 << 9usize)) | (((val.to_bits() as u32) & 0x03) << 9usize);
         }
         #[doc = "Calibration mode enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn calon(&self) -> bool {
             let val = (self.0 >> 11usize) & 0x01;
@@ -116,10 +124,11 @@ pub mod regs {
         }
         #[doc = "Calibration mode enable"]
         #[inline(always)]
-        pub fn set_calon(&mut self, val: bool) {
+        pub const fn set_calon(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 11usize)) | (((val as u32) & 0x01) << 11usize);
         }
         #[doc = "Calibration selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn calsel(&self) -> super::vals::Calsel {
             let val = (self.0 >> 12usize) & 0x03;
@@ -127,10 +136,11 @@ pub mod regs {
         }
         #[doc = "Calibration selection"]
         #[inline(always)]
-        pub fn set_calsel(&mut self, val: super::vals::Calsel) {
+        pub const fn set_calsel(&mut self, val: super::vals::Calsel) {
             self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
         }
         #[doc = "Gain in PGA mode"]
+        #[must_use]
         #[inline(always)]
         pub const fn pga_gain(&self) -> super::vals::PgaGain {
             let val = (self.0 >> 14usize) & 0x0f;
@@ -138,10 +148,11 @@ pub mod regs {
         }
         #[doc = "Gain in PGA mode"]
         #[inline(always)]
-        pub fn set_pga_gain(&mut self, val: super::vals::PgaGain) {
+        pub const fn set_pga_gain(&mut self, val: super::vals::PgaGain) {
             self.0 = (self.0 & !(0x0f << 14usize)) | (((val.to_bits() as u32) & 0x0f) << 14usize);
         }
         #[doc = "User trimming enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn usertrim(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -149,10 +160,11 @@ pub mod regs {
         }
         #[doc = "User trimming enable"]
         #[inline(always)]
-        pub fn set_usertrim(&mut self, val: bool) {
+        pub const fn set_usertrim(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Offset trimming value (PMOS)"]
+        #[must_use]
         #[inline(always)]
         pub const fn trimoffsetp(&self) -> u8 {
             let val = (self.0 >> 19usize) & 0x1f;
@@ -160,10 +172,11 @@ pub mod regs {
         }
         #[doc = "Offset trimming value (PMOS)"]
         #[inline(always)]
-        pub fn set_trimoffsetp(&mut self, val: u8) {
+        pub const fn set_trimoffsetp(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 19usize)) | (((val as u32) & 0x1f) << 19usize);
         }
         #[doc = "Offset trimming value (NMOS)"]
+        #[must_use]
         #[inline(always)]
         pub const fn trimoffsetn(&self) -> u8 {
             let val = (self.0 >> 24usize) & 0x1f;
@@ -171,10 +184,11 @@ pub mod regs {
         }
         #[doc = "Offset trimming value (NMOS)"]
         #[inline(always)]
-        pub fn set_trimoffsetn(&mut self, val: u8) {
+        pub const fn set_trimoffsetn(&mut self, val: u8) {
             self.0 = (self.0 & !(0x1f << 24usize)) | (((val as u32) & 0x1f) << 24usize);
         }
         #[doc = "Output the internal reference voltage"]
+        #[must_use]
         #[inline(always)]
         pub const fn tstref(&self) -> bool {
             let val = (self.0 >> 29usize) & 0x01;
@@ -182,10 +196,11 @@ pub mod regs {
         }
         #[doc = "Output the internal reference voltage"]
         #[inline(always)]
-        pub fn set_tstref(&mut self, val: bool) {
+        pub const fn set_tstref(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 29usize)) | (((val as u32) & 0x01) << 29usize);
         }
         #[doc = "Calibration output"]
+        #[must_use]
         #[inline(always)]
         pub const fn calout(&self) -> bool {
             let val = (self.0 >> 30usize) & 0x01;
@@ -193,10 +208,11 @@ pub mod regs {
         }
         #[doc = "Calibration output"]
         #[inline(always)]
-        pub fn set_calout(&mut self, val: bool) {
+        pub const fn set_calout(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 30usize)) | (((val as u32) & 0x01) << 30usize);
         }
         #[doc = "OPAMP lock"]
+        #[must_use]
         #[inline(always)]
         pub const fn lock(&self) -> bool {
             let val = (self.0 >> 31usize) & 0x01;
@@ -204,7 +220,7 @@ pub mod regs {
         }
         #[doc = "OPAMP lock"]
         #[inline(always)]
-        pub fn set_lock(&mut self, val: bool) {
+        pub const fn set_lock(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 31usize)) | (((val as u32) & 0x01) << 31usize);
         }
     }
@@ -249,13 +265,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Calsel {
         #[doc = "VREFOPAMP = 3.3% VDDA"]
-        PERCENT3_3 = 0x0,
+        Percent33 = 0x0,
         #[doc = "VREFOPAMP = 10% VDDA"]
-        PERCENT10 = 0x01,
+        Percent10 = 0x01,
         #[doc = "VREFOPAMP = 50% VDDA"]
-        PERCENT50 = 0x02,
+        Percent50 = 0x02,
         #[doc = "VREFOPAMP = 90% VDDA"]
-        PERCENT90 = 0x03,
+        Percent90 = 0x03,
     }
     impl Calsel {
         #[inline(always)]
@@ -284,33 +300,33 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum PgaGain {
         #[doc = "Gain 2"]
-        GAIN2 = 0x0,
+        Gain2 = 0x0,
         #[doc = "Gain 4"]
-        GAIN4 = 0x01,
+        Gain4 = 0x01,
         #[doc = "Gain 8"]
-        GAIN8 = 0x02,
+        Gain8 = 0x02,
         _RESERVED_3 = 0x03,
         #[doc = "Gain 16"]
-        GAIN16 = 0x04,
+        Gain16 = 0x04,
         _RESERVED_5 = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
         #[doc = "Gain 2, feedback connected to VM0"]
-        GAIN2_VM0 = 0x08,
+        Gain2Vm0 = 0x08,
         #[doc = "Gain 4, feedback connected to VM0"]
-        GAIN4_VM0 = 0x09,
+        Gain4Vm0 = 0x09,
         #[doc = "Gain 8, feedback connected to VM0"]
-        GAIN8_VM0 = 0x0a,
+        Gain8Vm0 = 0x0a,
         #[doc = "Gain 16, feedback connected to VM0"]
-        GAIN16_VM0 = 0x0b,
+        Gain16Vm0 = 0x0b,
         #[doc = "Gain 2, feedback connected to VM1"]
-        GAIN2_VM1 = 0x0c,
+        Gain2Vm1 = 0x0c,
         #[doc = "Gain 4, feedback connected to VM1"]
-        GAIN4_VM1 = 0x0d,
+        Gain4Vm1 = 0x0d,
         #[doc = "Gain 8, feedback connected to VM1"]
-        GAIN8_VM1 = 0x0e,
+        Gain8Vm1 = 0x0e,
         #[doc = "Gain 16, feedback connected to VM1"]
-        GAIN16_VM1 = 0x0f,
+        Gain16Vm1 = 0x0f,
     }
     impl PgaGain {
         #[inline(always)]
@@ -339,13 +355,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum VmSel {
         #[doc = "PC5 (VM0) used as OPAMP2 inverting input"]
-        PC5 = 0x0,
+        Pc5 = 0x0,
         #[doc = "PA5 (VM1) used as OPAMP2 inverting input"]
-        PA5 = 0x01,
+        Pa5 = 0x01,
         #[doc = "Resistor feedback output (PGA mode)"]
-        PGA = 0x02,
+        Pga = 0x02,
         #[doc = "Follower mode"]
-        FOLLOWER = 0x03,
+        Follower = 0x03,
     }
     impl VmSel {
         #[inline(always)]
@@ -374,9 +390,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum VmsSel {
         #[doc = "PC5 (VM0) used as OPAMP2 inverting input when TCM_EN = 1"]
-        PC5 = 0x0,
+        Pc5 = 0x0,
         #[doc = "PA5 (VM1) used as OPAMP2 inverting input when TCM_EN = 1"]
-        PA5 = 0x01,
+        Pa5 = 0x01,
     }
     impl VmsSel {
         #[inline(always)]
@@ -406,11 +422,11 @@ pub mod vals {
     pub enum VpSel {
         _RESERVED_0 = 0x0,
         #[doc = "PB14 used as OPAMP2 non-inverting input"]
-        PB14 = 0x01,
+        Pb14 = 0x01,
         #[doc = "PB0 used as OPAMP2 non-inverting input"]
-        PB0 = 0x02,
+        Pb0 = 0x02,
         #[doc = "PA7 used as OPAMP2 non-inverting input"]
-        PA7 = 0x03,
+        Pa7 = 0x03,
     }
     impl VpSel {
         #[inline(always)]
@@ -440,11 +456,11 @@ pub mod vals {
     pub enum VpsSel {
         _RESERVED_0 = 0x0,
         #[doc = "PB14 used as OPAMP2 non-inverting input when TCM_EN=1"]
-        PB14 = 0x01,
+        Pb14 = 0x01,
         #[doc = "PB0 used as OPAMP2 non-inverting input when TCM_EN=1"]
-        PB0 = 0x02,
+        Pb0 = 0x02,
         #[doc = "PA7 used as OPAMP2 non-inverting input when TCM_EN=1"]
-        PA7 = 0x03,
+        Pa7 = 0x03,
     }
     impl VpsSel {
         #[inline(always)]

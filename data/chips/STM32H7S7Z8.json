@@ -1659,6 +1659,24 @@
           ]
         },
         {
+          "name": "DLYB_SDMMC1",
+          "address": 1375764480,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
+          "name": "DLYB_SDMMC2",
+          "address": 1207969792,
+          "registers": {
+            "kind": "dlyb",
+            "version": "v1",
+            "block": "DLYB"
+          }
+        },
+        {
           "name": "DMA2D",
           "address": 1375735808,
           "registers": {
@@ -3816,7 +3834,7 @@
           },
           "rcc": {
             "bus_clock": "PCLK5",
-            "kernel_clock": "PCLK5",
+            "kernel_clock": "PLL3_R",
             "enable": {
               "register": "APB5ENR",
               "field": "LTDCEN"
@@ -3989,7 +4007,7 @@
               "interrupt": "LTDC_ER"
             },
             {
-              "signal": "GLOBAL",
+              "signal": "LO",
               "interrupt": "LTDC"
             }
           ]
@@ -4104,7 +4122,7 @@
           "address": 1207960576,
           "registers": {
             "kind": "pssi",
-            "version": "v1",
+            "version": "v1_h7rs",
             "block": "PSSI"
           },
           "rcc": {
@@ -4396,7 +4414,7 @@
           "address": 1208090624,
           "registers": {
             "kind": "rng",
-            "version": "v1",
+            "version": "v3",
             "block": "RNG"
           },
           "rcc": {
@@ -5737,7 +5755,7 @@
           "address": 1107296256,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -5919,7 +5937,7 @@
           "address": 1073747968,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH"
           },
           "rcc": {
@@ -5974,7 +5992,7 @@
           "address": 1073748992,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -6024,7 +6042,7 @@
           "address": 1073750016,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -6074,7 +6092,7 @@
           "address": 1107312640,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH_CMP"
           },
           "rcc": {
@@ -6186,7 +6204,7 @@
           "address": 1107313664,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -6263,7 +6281,7 @@
           "address": 1107314688,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -6340,7 +6358,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -6457,7 +6475,7 @@
           "address": 1073742848,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -6574,7 +6592,7 @@
           "address": 1073744896,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -6661,7 +6679,7 @@
           "address": 1073745920,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -6711,7 +6729,7 @@
           "address": 1073746944,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -6761,7 +6779,7 @@
           "address": 1107315712,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH"
           },
           "rcc": {

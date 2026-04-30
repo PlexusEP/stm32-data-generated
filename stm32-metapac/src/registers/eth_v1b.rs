@@ -4516,14 +4516,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "MAC passes all incoming frames unmodified",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "STRIP",
+                    name: "Strip",
                     description: Some(
                         "MAC strips the Pad/FCS field on incoming frames only for lengths less than or equal to 1500 bytes",
                     ),
@@ -4537,18 +4537,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Address filters pass all received broadcast frames",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "Address filters filter all incoming broadcast frames",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Address filters pass all received broadcast frames",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4558,32 +4558,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "BL10",
+                    name: "Bl1",
+                    description: Some(
+                        "For retransmission n, wait up to 2^min(n, 1) time slots",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Bl10",
                     description: Some(
                         "For retransmission n, wait up to 2^min(n, 10) time slots",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "BL8",
-                    description: Some(
-                        "For retransmission n, wait up to 2^min(n, 8) time slots",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "BL4",
+                    name: "Bl4",
                     description: Some(
                         "For retransmission n, wait up to 2^min(n, 4) time slots",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "BL1",
+                    name: "Bl8",
                     description: Some(
-                        "For retransmission n, wait up to 2^min(n, 1) time slots",
+                        "For retransmission n, wait up to 2^min(n, 8) time slots",
                     ),
-                    value: 3,
+                    value: 1,
                 },
             ],
         },
@@ -4593,7 +4593,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "RESET",
+                    name: "Reset",
                     description: Some(
                         "Reset all counters. Cleared automatically",
                     ),
@@ -4607,39 +4607,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "CR_60_100",
-                    description: Some(
-                        "60-100MHz HCLK/42",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "CR_100_150",
+                    name: "Cr100150",
                     description: Some(
                         "100-150 MHz HCLK/62",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "CR_20_35",
+                    name: "Cr150168",
+                    description: Some(
+                        "150-168MHz HCLK/102",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Cr2035",
                     description: Some(
                         "20-35MHz HCLK/16",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "CR_35_60",
+                    name: "Cr3560",
                     description: Some(
                         "35-60MHz HCLK/16",
                     ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "CR_150_168",
+                    name: "Cr60100",
                     description: Some(
-                        "150-168MHz HCLK/102",
+                        "60-100MHz HCLK/42",
                     ),
-                    value: 4,
+                    value: 0,
                 },
             ],
         },
@@ -4649,18 +4649,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Errors generated due to loss of carrier",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "No error generated due to loss of carrier",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Errors generated due to loss of carrier",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4670,18 +4670,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ROLLOVER",
-                    description: Some(
-                        "Counters roll over to zero after reaching the maximum value",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "NOT_ROLLOVER",
+                    name: "NotRollover",
                     description: Some(
                         "Counters do not roll over to zero after reaching the maximum value",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Rollover",
+                    description: Some(
+                        "Counters roll over to zero after reaching the maximum value",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4691,14 +4691,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ROUND_ROBIN",
+                    name: "RoundRobin",
                     description: Some(
                         "Round-robin with Rx:Tx priority given by PM",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "RX_PRIORITY",
+                    name: "RxPriority",
                     description: Some(
                         "Rx has priority over Tx",
                     ),
@@ -4712,18 +4712,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
-                    description: Some(
-                        "Normal filtering of frames",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "INVERT",
+                    name: "Invert",
                     description: Some(
                         "Address check block operates in inverse filtering mode for the DA address comparison",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Normal",
+                    description: Some(
+                        "Normal filtering of frames",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4733,18 +4733,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "HALF_DUPLEX",
-                    description: Some(
-                        "MAC operates in half-duplex mode",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FULL_DUPLEX",
+                    name: "FullDuplex",
                     description: Some(
                         "MAC operates in full-duplex mode",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "HalfDuplex",
+                    description: Some(
+                        "MAC operates in half-duplex mode",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4754,18 +4754,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "STOPPED",
-                    description: Some(
-                        "Reception is stopped after transfer of the current frame",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "STARTED",
+                    name: "Started",
                     description: Some(
                         "Reception is placed in the Running state",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Stopped",
+                    description: Some(
+                        "Reception is stopped after transfer of the current frame",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4775,18 +4775,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Drop frames with errors only in the receive checksum offload engine",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "Do not drop frames that only have errors in the receive checksum offload engine",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Drop frames with errors only in the receive checksum offload engine",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4796,18 +4796,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "VARIABLE",
-                    description: Some(
-                        "AHB uses SINGLE and INCR burst transfers",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FIXED",
+                    name: "Fixed",
                     description: Some(
                         "AHB uses only fixed burst transfers",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Variable",
+                    description: Some(
+                        "AHB uses SINGLE and INCR burst transfers",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4817,14 +4817,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DISABLE_BACK_PRESSURE",
+                    name: "DisableBackPressure",
                     description: Some(
                         "In half duplex only, deasserts back pressure",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "PAUSE_OR_BACK_PRESSURE",
+                    name: "PauseOrBackPressure",
                     description: Some(
                         "In full duplex, initiate a Pause control frame. In half duplex, assert back pressure",
                     ),
@@ -4838,14 +4838,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DROP",
+                    name: "Drop",
                     description: Some(
                         "Rx FIFO drops frames with error status",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "FORWARD",
+                    name: "Forward",
                     description: Some(
                         "All frames except runt error frames are forwarded to the DMA",
                     ),
@@ -4859,14 +4859,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "FES10",
+                    name: "Fes10",
                     description: Some(
                         "10 Mbit/s",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "FES100",
+                    name: "Fes100",
                     description: Some(
                         "100 Mbit/s",
                     ),
@@ -4901,7 +4901,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "FLUSH",
+                    name: "Flush",
                     description: Some(
                         "Transmit FIFO controller logic is reset to its default values. Cleared automatically",
                     ),
@@ -4915,14 +4915,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DROP",
+                    name: "Drop",
                     description: Some(
                         "Rx FIFO drops all frames of less than 64 bytes",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "FORWARD",
+                    name: "Forward",
                     description: Some(
                         "Rx FIFO forwards undersized frames",
                     ),
@@ -4936,18 +4936,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "PERFECT",
-                    description: Some(
-                        "MAC performs a perfect destination address filtering for multicast frames",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "HASH",
+                    name: "Hash",
                     description: Some(
                         "MAC performs destination address filtering of received multicast frames according to the hash table",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Perfect",
+                    description: Some(
+                        "MAC performs a perfect destination address filtering for multicast frames",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4957,14 +4957,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "HASH_ONLY",
+                    name: "HashOnly",
                     description: Some(
                         "If HM or HU is set, only frames that match the Hash filter are passed",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "HASH_OR_PERFECT",
+                    name: "HashOrPerfect",
                     description: Some(
                         "If HM or HU is set, frames that match either the perfect filter or the hash filter are passed",
                     ),
@@ -4978,18 +4978,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "PERFECT",
-                    description: Some(
-                        "MAC performs a perfect destination address filtering for unicast frames",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "HASH",
+                    name: "Hash",
                     description: Some(
                         "MAC performs destination address filtering of received unicast frames according to the hash table",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Perfect",
+                    description: Some(
+                        "MAC performs a perfect destination address filtering for unicast frames",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -4999,60 +4999,60 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "IFG96",
+                    name: "Ifg40",
                     description: Some(
-                        "96 bit times",
+                        "40 bit times",
                     ),
-                    value: 0,
+                    value: 7,
                 },
                 EnumVariant {
-                    name: "IFG88",
-                    description: Some(
-                        "88 bit times",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "IFG80",
-                    description: Some(
-                        "80 bit times",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "IFG72",
-                    description: Some(
-                        "72 bit times",
-                    ),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "IFG64",
-                    description: Some(
-                        "64 bit times",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "IFG56",
-                    description: Some(
-                        "56 bit times",
-                    ),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "IFG48",
+                    name: "Ifg48",
                     description: Some(
                         "48 bit times",
                     ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "IFG40",
+                    name: "Ifg56",
                     description: Some(
-                        "40 bit times",
+                        "56 bit times",
                     ),
-                    value: 7,
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "Ifg64",
+                    description: Some(
+                        "64 bit times",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Ifg72",
+                    description: Some(
+                        "72 bit times",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Ifg80",
+                    description: Some(
+                        "80 bit times",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Ifg88",
+                    description: Some(
+                        "88 bit times",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Ifg96",
+                    description: Some(
+                        "96 bit times",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5062,14 +5062,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "IPv4 checksum offload disabled",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "OFFLOAD",
+                    name: "Offload",
                     description: Some(
                         "IPv4 checksums are checked in received frames",
                     ),
@@ -5083,18 +5083,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Jabber enabled, transmit frames up to 2048 bytes",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "Jabber disabled, transmit frames up to 16384 bytes",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Jabber enabled, transmit frames up to 2048 bytes",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5104,18 +5104,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
-                    description: Some(
-                        "Normal mode",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "LOOPBACK",
+                    name: "Loopback",
                     description: Some(
                         "MAC operates in loopback mode at the MII",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Normal",
+                    description: Some(
+                        "Normal mode",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5125,14 +5125,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DESTINATION",
+                    name: "Destination",
                     description: Some(
                         "This address is used for comparison with DA fields of the received frame",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SOURCE",
+                    name: "Source",
                     description: Some(
                         "This address is used for comparison with SA fields of received frames",
                     ),
@@ -5146,18 +5146,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
-                    description: Some(
-                        "Fixed burst transfers (INCRx and SINGLE) for burst lengths of 16 and below",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MIXED",
+                    name: "Mixed",
                     description: Some(
                         "If FB is low, start all bursts greater than 16 with INCR (undefined burst)",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Normal",
+                    description: Some(
+                        "Fixed burst transfers (INCRx and SINGLE) for burst lengths of 16 and below",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5167,7 +5167,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "BUSY",
+                    name: "Busy",
                     description: Some(
                         "This bit is set to 1 by the application to indicate that a read or write access is in progress",
                     ),
@@ -5181,18 +5181,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ALMOST_HALF",
-                    description: Some(
-                        "When MCP is set, MMC counters are preset to almost-half value 0x7FFF_FFF0",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "ALMOST_FULL",
+                    name: "AlmostFull",
                     description: Some(
                         "When MCP is set, MMC counters are preset to almost-full value 0xFFFF_FFF0",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "AlmostHalf",
+                    description: Some(
+                        "When MCP is set, MMC counters are preset to almost-half value 0x7FFF_FFF0",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5202,7 +5202,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "PRESET",
+                    name: "Preset",
                     description: Some(
                         "MMC counters will be preset to almost full or almost half. Cleared automatically",
                     ),
@@ -5216,14 +5216,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "READ",
+                    name: "Read",
                     description: Some(
                         "Read operation",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "WRITE",
+                    name: "Write",
                     description: Some(
                         "Write operation",
                     ),
@@ -5237,46 +5237,46 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 6,
             variants: &[
                 EnumVariant {
-                    name: "PBL1",
+                    name: "Pbl1",
                     description: Some(
                         "Maximum of 1 beat per DMA transaction",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "PBL2",
-                    description: Some(
-                        "Maximum of 2 beats per DMA transaction",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "PBL4",
-                    description: Some(
-                        "Maximum of 4 beats per DMA transaction",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "PBL8",
-                    description: Some(
-                        "Maximum of 8 beats per DMA transaction",
-                    ),
-                    value: 8,
-                },
-                EnumVariant {
-                    name: "PBL16",
+                    name: "Pbl16",
                     description: Some(
                         "Maximum of 16 beats per DMA transaction",
                     ),
                     value: 16,
                 },
                 EnumVariant {
-                    name: "PBL32",
+                    name: "Pbl2",
+                    description: Some(
+                        "Maximum of 2 beats per DMA transaction",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Pbl32",
                     description: Some(
                         "Maximum of 32 beats per DMA transaction",
                     ),
                     value: 32,
+                },
+                EnumVariant {
+                    name: "Pbl4",
+                    description: Some(
+                        "Maximum of 4 beats per DMA transaction",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Pbl8",
+                    description: Some(
+                        "Maximum of 8 beats per DMA transaction",
+                    ),
+                    value: 8,
                 },
             ],
         },
@@ -5286,32 +5286,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "PREVENT_ALL",
-                    description: Some(
-                        "MAC prevents all control frames from reaching the application",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FORWARD_ALL_EXCEPT_PAUSE",
-                    description: Some(
-                        "MAC forwards all control frames to application except Pause",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "FORWARD_ALL",
+                    name: "ForwardAll",
                     description: Some(
                         "MAC forwards all control frames to application even if they fail the address filter",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "FORWARD_ALL_FILTERED",
+                    name: "ForwardAllExceptPause",
+                    description: Some(
+                        "MAC forwards all control frames to application except Pause",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "ForwardAllFiltered",
                     description: Some(
                         "MAC forwards control frames that pass the address filter",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "PreventAll",
+                    description: Some(
+                        "MAC prevents all control frames from reaching the application",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5321,7 +5321,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
+                    name: "Enabled",
                     description: Some(
                         "All received frames will be dropped. Cleared automatically when a magic packet or wakeup frame is received",
                     ),
@@ -5335,32 +5335,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "PLT4",
-                    description: Some(
-                        "Pause time minus 4 slot times",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "PLT28",
-                    description: Some(
-                        "Pause time minus 28 slot times",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "PLT144",
+                    name: "Plt144",
                     description: Some(
                         "Pause time minus 144 slot times",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "PLT256",
+                    name: "Plt256",
                     description: Some(
                         "Pause time minus 256 slot times",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "Plt28",
+                    description: Some(
+                        "Pause time minus 28 slot times",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Plt4",
+                    description: Some(
+                        "Pause time minus 4 slot times",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5370,18 +5370,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "PMT Status interrupt generation enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "PMT Status interrupt generation disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "PMT Status interrupt generation enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5391,32 +5391,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "ONE_TO_ONE",
+                    name: "FourToOne",
+                    description: Some(
+                        "RxDMA priority over TxDMA is 4:1",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "OneToOne",
                     description: Some(
                         "RxDMA priority over TxDMA is 1:1",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "TWO_TO_ONE",
-                    description: Some(
-                        "RxDMA priority over TxDMA is 2:1",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "THREE_TO_ONE",
+                    name: "ThreeToOne",
                     description: Some(
                         "RxDMA priority over TxDMA is 3:1",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "FOUR_TO_ONE",
+                    name: "TwoToOne",
                     description: Some(
-                        "RxDMA priority over TxDMA is 4:1",
+                        "RxDMA priority over TxDMA is 2:1",
                     ),
-                    value: 3,
+                    value: 1,
                 },
             ],
         },
@@ -5426,18 +5426,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "MAC attempts retries based on the settings of BL",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "MAC attempts only 1 transmission",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "MAC attempts retries based on the settings of BL",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5447,46 +5447,46 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 6,
             variants: &[
                 EnumVariant {
-                    name: "RDP1",
+                    name: "Rdp1",
                     description: Some(
                         "1 beat per RxDMA transaction",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "RDP2",
-                    description: Some(
-                        "2 beats per RxDMA transaction",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "RDP4",
-                    description: Some(
-                        "4 beats per RxDMA transaction",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "RDP8",
-                    description: Some(
-                        "8 beats per RxDMA transaction",
-                    ),
-                    value: 8,
-                },
-                EnumVariant {
-                    name: "RDP16",
+                    name: "Rdp16",
                     description: Some(
                         "16 beats per RxDMA transaction",
                     ),
                     value: 16,
                 },
                 EnumVariant {
-                    name: "RDP32",
+                    name: "Rdp2",
+                    description: Some(
+                        "2 beats per RxDMA transaction",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Rdp32",
                     description: Some(
                         "32 beats per RxDMA transaction",
                     ),
                     value: 32,
+                },
+                EnumVariant {
+                    name: "Rdp4",
+                    description: Some(
+                        "4 beats per RxDMA transaction",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Rdp8",
+                    description: Some(
+                        "8 beats per RxDMA transaction",
+                    ),
+                    value: 8,
                 },
             ],
         },
@@ -5496,18 +5496,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Received-alignment-error counter half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Received-alignment-error counter half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Received-alignment-error counter half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5517,18 +5517,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Received-crc-error counter half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Received-crc-error counter half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Received-crc-error counter half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5538,18 +5538,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Received-good-unicast counter half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Received-good-unicast counter half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Received-good-unicast counter half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5559,18 +5559,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "MAC receives all packets from PHY while transmitting",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "MAC disables reception of frames in half-duplex mode",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "MAC receives all packets from PHY while transmitting",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5580,7 +5580,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 32,
             variants: &[
                 EnumVariant {
-                    name: "POLL",
+                    name: "Poll",
                     description: Some(
                         "Poll the receive descriptor list",
                     ),
@@ -5594,39 +5594,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "STOPPED",
-                    description: Some(
-                        "Stopped, reset or Stop Receive command issued",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "RUNNING_FETCHING",
+                    name: "RunningFetching",
                     description: Some(
                         "Running, fetching receive transfer descriptor",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "RUNNING_WAITING",
+                    name: "RunningWaiting",
                     description: Some(
                         "Running, waiting for receive packet",
                     ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "SUSPENDED",
-                    description: Some(
-                        "Suspended, receive descriptor unavailable",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "RUNNING_WRITING",
+                    name: "RunningWriting",
                     description: Some(
                         "Running, writing data to host memory buffer",
                     ),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Stopped",
+                    description: Some(
+                        "Stopped, reset or Stop Receive command issued",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Suspended",
+                    description: Some(
+                        "Suspended, receive descriptor unavailable",
+                    ),
+                    value: 4,
                 },
             ],
         },
@@ -5636,14 +5636,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "CUT_THROUGH",
+                    name: "CutThrough",
                     description: Some(
                         "Rx FIFO operates in cut-through mode, subject to RTC bits",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "STORE_FORWARD",
+                    name: "StoreForward",
                     description: Some(
                         "Frames are read from Rx FIFO after complete frame has been written",
                     ),
@@ -5657,32 +5657,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "RTC64",
+                    name: "Rtc128",
                     description: Some(
-                        "64 bytes",
+                        "128 bytes",
                     ),
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "RTC32",
+                    name: "Rtc32",
                     description: Some(
                         "32 bytes",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "RTC96",
+                    name: "Rtc64",
+                    description: Some(
+                        "64 bytes",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Rtc96",
                     description: Some(
                         "96 bytes",
                     ),
                     value: 2,
-                },
-                EnumVariant {
-                    name: "RTC128",
-                    description: Some(
-                        "128 bytes",
-                    ),
-                    value: 3,
                 },
             ],
         },
@@ -5692,18 +5692,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
-                    description: Some(
-                        "Source address filter operates normally",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "INVERT",
+                    name: "Invert",
                     description: Some(
                         "Source address filter operation inverted",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Normal",
+                    description: Some(
+                        "Source address filter operates normally",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5713,18 +5713,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "STOPPED",
-                    description: Some(
-                        "Transmission is placed in the Stopped state",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "STARTED",
+                    name: "Started",
                     description: Some(
                         "Transmission is placed in Running state",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Stopped",
+                    description: Some(
+                        "Transmission is placed in the Stopped state",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5734,18 +5734,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Transmitted-good counter half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Transmitted-good counter half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Transmitted-good counter half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5755,18 +5755,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Transmitted-good-multiple-collision half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Transmitted-good-multiple-collision half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Transmitted-good-multiple-collision half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5776,18 +5776,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Transmitted-good-single-collision half-full interrupt enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Transmitted-good-single-collision half-full interrupt disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Transmitted-good-single-collision half-full interrupt enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5797,7 +5797,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 32,
             variants: &[
                 EnumVariant {
-                    name: "POLL",
+                    name: "Poll",
                     description: Some(
                         "Poll the transmit descriptor list",
                     ),
@@ -5811,46 +5811,46 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "STOPPED",
+                    name: "Running",
                     description: Some(
-                        "Stopped, Reset or Stop Transmit command issued",
+                        "Running, closing transmit descriptor",
                     ),
-                    value: 0,
+                    value: 7,
                 },
                 EnumVariant {
-                    name: "RUNNING_FETCHING",
+                    name: "RunningFetching",
                     description: Some(
                         "Running, fetching transmit transfer descriptor",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "RUNNING_WAITING",
-                    description: Some(
-                        "Running, waiting for status",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "RUNNING_READING",
+                    name: "RunningReading",
                     description: Some(
                         "Running, reading data from host memory buffer",
                     ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "SUSPENDED",
+                    name: "RunningWaiting",
+                    description: Some(
+                        "Running, waiting for status",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Stopped",
+                    description: Some(
+                        "Stopped, Reset or Stop Transmit command issued",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Suspended",
                     description: Some(
                         "Suspended, transmit descriptor unavailable or transmit buffer underflow",
                     ),
                     value: 6,
-                },
-                EnumVariant {
-                    name: "RUNNING",
-                    description: Some(
-                        "Running, closing transmit descriptor",
-                    ),
-                    value: 7,
                 },
             ],
         },
@@ -5860,14 +5860,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "CUT_THROUGH",
+                    name: "CutThrough",
                     description: Some(
                         "Transmission starts when the frame size in the Tx FIFO exceeds TTC threshold",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "STORE_FORWARD",
+                    name: "StoreForward",
                     description: Some(
                         "Transmission starts when a full frame is in the Tx FIFO",
                     ),
@@ -5881,18 +5881,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "UNMASKED",
-                    description: Some(
-                        "Time stamp interrupt generation enabled",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MASKED",
+                    name: "Masked",
                     description: Some(
                         "Time stamp interrupt generation disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Unmasked",
+                    description: Some(
+                        "Time stamp interrupt generation enabled",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5902,60 +5902,60 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "TTC64",
-                    description: Some(
-                        "64 bytes",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "TTC128",
+                    name: "Ttc128",
                     description: Some(
                         "128 bytes",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "TTC192",
+                    name: "Ttc16",
+                    description: Some(
+                        "16 bytes",
+                    ),
+                    value: 7,
+                },
+                EnumVariant {
+                    name: "Ttc192",
                     description: Some(
                         "192 bytes",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "TTC256",
-                    description: Some(
-                        "256 bytes",
-                    ),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "TTC40",
-                    description: Some(
-                        "40 bytes",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "TTC32",
-                    description: Some(
-                        "32 bytes",
-                    ),
-                    value: 5,
-                },
-                EnumVariant {
-                    name: "TTC24",
+                    name: "Ttc24",
                     description: Some(
                         "24 bytes",
                     ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "TTC16",
+                    name: "Ttc256",
                     description: Some(
-                        "16 bytes",
+                        "256 bytes",
                     ),
-                    value: 7,
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Ttc32",
+                    description: Some(
+                        "32 bytes",
+                    ),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "Ttc40",
+                    description: Some(
+                        "40 bytes",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Ttc64",
+                    description: Some(
+                        "64 bytes",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -5965,14 +5965,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "COMBINED",
+                    name: "Combined",
                     description: Some(
                         "PBL value used for both Rx and Tx DMA",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SEPARATE",
+                    name: "Separate",
                     description: Some(
                         "RxDMA uses RDP value, TxDMA uses PBL value",
                     ),
@@ -5986,18 +5986,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "VLANTC16",
-                    description: Some(
-                        "Full 16 bit VLAN identifiers are used for comparison and filtering",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "VLANTC12",
+                    name: "Vlantc12",
                     description: Some(
                         "12 bit VLAN identifies are used for comparison and filtering",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Vlantc16",
+                    description: Some(
+                        "Full 16 bit VLAN identifiers are used for comparison and filtering",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -6007,18 +6007,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Watchdog enabled, receive frames limited to 2048 bytes",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "Watchdog disabled, receive frames may be up to to 16384 bytes",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Watchdog enabled, receive frames limited to 2048 bytes",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -6028,7 +6028,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "RESET",
+                    name: "Reset",
                     description: Some(
                         "Reset wakeup frame filter register point to 0b000. Automatically cleared",
                     ),
@@ -6042,18 +6042,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ENABLED",
-                    description: Some(
-                        "Normal operation with automatic zero-quanta pause control frame generation",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DISABLED",
+                    name: "Disabled",
                     description: Some(
                         "Automatic generation of zero-quanta pause control frames is disabled",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Enabled",
+                    description: Some(
+                        "Normal operation with automatic zero-quanta pause control frame generation",
+                    ),
+                    value: 0,
                 },
             ],
         },

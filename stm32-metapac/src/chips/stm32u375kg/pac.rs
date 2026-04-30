@@ -491,6 +491,9 @@ pub const PWR: pwr::Pwr = unsafe { pwr::Pwr::from_ptr(0x4003_0800usize as _) };
 pub const RCC: rcc::Rcc = unsafe { rcc::Rcc::from_ptr(0x4003_0c00usize as _) };
 pub const EXTI: exti::Exti = unsafe { exti::Exti::from_ptr(0x4003_2000usize as _) };
 pub const GTZC: *mut () = 0x4003_2400usize as _;
+pub const GTZC_TZSC: *mut () = 0x4003_2400usize as _;
+pub const GTZC_MPCBB1: *mut () = 0x4003_2c00usize as _;
+pub const GTZC_MPCBB2: *mut () = 0x4003_3000usize as _;
 pub const ADF1: *mut () = 0x4003_4000usize as _;
 pub const SYSCFG: syscfg::Syscfg = unsafe { syscfg::Syscfg::from_ptr(0x4004_0400usize as _) };
 pub const LPUART1: usart::Lpuart = unsafe { usart::Lpuart::from_ptr(0x4004_2400usize as _) };
@@ -513,7 +516,10 @@ pub const ADC12_COMMON: adccommon::AdcCommon = unsafe { adccommon::AdcCommon::fr
 pub const DAC1: dac::Dac = unsafe { dac::Dac::from_ptr(0x4202_8400usize as _) };
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x420c_0400usize as _) };
 pub const RNG: *mut () = 0x420c_0800usize as _;
+pub const DLYB_SDMMC1: dlyb::Dlyb = unsafe { dlyb::Dlyb::from_ptr(0x420c_8400usize as _) };
+pub const DLYB_OCTOSPI1: dlyb::Dlyb = unsafe { dlyb::Dlyb::from_ptr(0x420c_f000usize as _) };
 pub const OCTOSPI1: *mut () = 0x420d_1400usize as _;
+pub const GTZC_TZIC: *mut () = 0x5003_2800usize as _;
 pub const DBGMCU: dbgmcu::Dbgmcu = unsafe { dbgmcu::Dbgmcu::from_ptr(0xe004_4000usize as _) };
 #[doc = r" Number available in the NVIC for configuring priority"]
 #[cfg(feature = "rt")]
@@ -538,6 +544,8 @@ pub mod crs;
 pub mod dac;
 #[path = "../../peripherals/dbgmcu_u3.rs"]
 pub mod dbgmcu;
+#[path = "../../peripherals/dlyb_v1.rs"]
+pub mod dlyb;
 #[path = "../../peripherals/exti_u3.rs"]
 pub mod exti;
 #[path = "../../peripherals/fdcanram_v1.rs"]

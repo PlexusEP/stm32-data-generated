@@ -1396,19 +1396,19 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "RISING",
+                    name: "Both",
                     description: None,
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "FALLING",
+                    name: "Falling",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "BOTH",
+                    name: "Rising",
                     description: None,
-                    value: 3,
+                    value: 0,
                 },
             ],
         },
@@ -1418,12 +1418,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "ACTIVE_HIGH",
+                    name: "ActiveHigh",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "ACTIVE_LOW",
+                    name: "ActiveLow",
                     description: None,
                     value: 1,
                 },
@@ -1435,18 +1435,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "OUTPUT_COMPARE",
-                    description: Some(
-                        "channel is configured in output PWM mode",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "INPUT_CAPTURE",
+                    name: "InputCapture",
                     description: Some(
                         "channel is configured in input capture mode",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "OutputCompare",
+                    description: Some(
+                        "channel is configured in output PWM mode",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -1456,25 +1456,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "RISING",
+                    name: "Both",
                     description: Some(
-                        "the rising edge is the active edge used for counting. If the LPTIM is configured in Encoder mode (ENC bit is set), the encoder sub-mode 1 is active.",
+                        "both edges are active edges. When both external clock signal edges are considered active ones, the LPTIM must also be clocked by an internal clock source with a frequency equal to at least four times the external clock frequency. If the LPTIM is configured in Encoder mode (ENC bit is set), the encoder sub-mode 3 is active.",
                     ),
-                    value: 0,
+                    value: 2,
                 },
                 EnumVariant {
-                    name: "FALLING",
+                    name: "Falling",
                     description: Some(
                         "the falling edge is the active edge used for counting. If the LPTIM is configured in Encoder mode (ENC bit is set), the encoder sub-mode 2 is active.",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "BOTH",
+                    name: "Rising",
                     description: Some(
-                        "both edges are active edges. When both external clock signal edges are considered active ones, the LPTIM must also be clocked by an internal clock source with a frequency equal to at least four times the external clock frequency. If the LPTIM is configured in Encoder mode (ENC bit is set), the encoder sub-mode 3 is active.",
+                        "the rising edge is the active edge used for counting. If the LPTIM is configured in Encoder mode (ENC bit is set), the encoder sub-mode 1 is active.",
                     ),
-                    value: 2,
+                    value: 0,
                 },
             ],
         },
@@ -1484,18 +1484,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "INTERNAL",
-                    description: Some(
-                        "clocked by internal clock source (APB clock or any of the embedded oscillators)",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "EXTERNAL",
+                    name: "External",
                     description: Some(
                         "clocked by an external clock source through the LPTIM external Input1",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Internal",
+                    description: Some(
+                        "clocked by internal clock source (APB clock or any of the embedded oscillators)",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -1505,22 +1505,22 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "COUNT1",
+                    name: "Count1",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "COUNT2",
+                    name: "Count2",
                     description: None,
                     value: 1,
                 },
                 EnumVariant {
-                    name: "COUNT4",
+                    name: "Count4",
                     description: None,
                     value: 2,
                 },
                 EnumVariant {
-                    name: "COUNT8",
+                    name: "Count8",
                     description: None,
                     value: 3,
                 },
@@ -1532,44 +1532,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "DIV1",
+                    name: "Div1",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "DIV2",
+                    name: "Div128",
                     description: None,
-                    value: 1,
+                    value: 7,
                 },
                 EnumVariant {
-                    name: "DIV4",
-                    description: None,
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "DIV8",
-                    description: None,
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "DIV16",
+                    name: "Div16",
                     description: None,
                     value: 4,
                 },
                 EnumVariant {
-                    name: "DIV32",
+                    name: "Div2",
+                    description: None,
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Div32",
                     description: None,
                     value: 5,
                 },
                 EnumVariant {
-                    name: "DIV64",
+                    name: "Div4",
+                    description: None,
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Div64",
                     description: None,
                     value: 6,
                 },
                 EnumVariant {
-                    name: "DIV128",
+                    name: "Div8",
                     description: None,
-                    value: 7,
+                    value: 3,
                 },
             ],
         },
@@ -1579,32 +1579,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "SOFTWARE",
+                    name: "BothEdge",
                     description: Some(
-                        "software trigger (counting start is initiated by software)",
+                        "both edges are active edges",
                     ),
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "RISING_EDGE",
-                    description: Some(
-                        "rising edge is the active edge",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "FALLING_EDGE",
+                    name: "FallingEdge",
                     description: Some(
                         "falling edge is the active edge",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "BOTH_EDGE",
+                    name: "RisingEdge",
                     description: Some(
-                        "both edges are active edges",
+                        "rising edge is the active edge",
                     ),
-                    value: 3,
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Software",
+                    description: Some(
+                        "software trigger (counting start is initiated by software)",
+                    ),
+                    value: 0,
                 },
             ],
         },

@@ -55,64 +55,64 @@ pub(crate) static REGISTERS: IR = IR {
         bit_size: 4,
         variants: &[
             EnumVariant {
-                name: "DIV1",
+                name: "Div1",
                 description: Some("adc_ker_ck_input not divided"),
                 value: 0,
             },
             EnumVariant {
-                name: "DIV2",
-                description: Some("adc_ker_ck_input divided by 2"),
-                value: 1,
-            },
-            EnumVariant {
-                name: "DIV4",
-                description: Some("adc_ker_ck_input divided by 4"),
-                value: 2,
-            },
-            EnumVariant {
-                name: "DIV6",
-                description: Some("adc_ker_ck_input divided by 6"),
-                value: 3,
-            },
-            EnumVariant {
-                name: "DIV8",
-                description: Some("adc_ker_ck_input divided by 8"),
-                value: 4,
-            },
-            EnumVariant {
-                name: "DIV10",
+                name: "Div10",
                 description: Some("adc_ker_ck_input divided by 10"),
                 value: 5,
             },
             EnumVariant {
-                name: "DIV12",
+                name: "Div12",
                 description: Some("adc_ker_ck_input divided by 12"),
                 value: 6,
             },
             EnumVariant {
-                name: "DIV16",
-                description: Some("adc_ker_ck_input divided by 16"),
-                value: 7,
-            },
-            EnumVariant {
-                name: "DIV32",
-                description: Some("adc_ker_ck_input divided by 32"),
-                value: 8,
-            },
-            EnumVariant {
-                name: "DIV64",
-                description: Some("adc_ker_ck_input divided by 64"),
-                value: 9,
-            },
-            EnumVariant {
-                name: "DIV128",
+                name: "Div128",
                 description: Some("adc_ker_ck_input divided by 128"),
                 value: 10,
             },
             EnumVariant {
-                name: "DIV256",
+                name: "Div16",
+                description: Some("adc_ker_ck_input divided by 16"),
+                value: 7,
+            },
+            EnumVariant {
+                name: "Div2",
+                description: Some("adc_ker_ck_input divided by 2"),
+                value: 1,
+            },
+            EnumVariant {
+                name: "Div256",
                 description: Some("adc_ker_ck_input divided by 256"),
                 value: 11,
+            },
+            EnumVariant {
+                name: "Div32",
+                description: Some("adc_ker_ck_input divided by 32"),
+                value: 8,
+            },
+            EnumVariant {
+                name: "Div4",
+                description: Some("adc_ker_ck_input divided by 4"),
+                value: 2,
+            },
+            EnumVariant {
+                name: "Div6",
+                description: Some("adc_ker_ck_input divided by 6"),
+                value: 3,
+            },
+            EnumVariant {
+                name: "Div64",
+                description: Some("adc_ker_ck_input divided by 64"),
+                value: 9,
+            },
+            EnumVariant {
+                name: "Div8",
+                description: Some("adc_ker_ck_input divided by 8"),
+                value: 4,
             },
         ],
     }],

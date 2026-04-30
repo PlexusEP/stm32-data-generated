@@ -1086,6 +1086,40 @@
               "dmamux": "DMAMUX1",
               "request": 5
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "EXTI11_TRG"
+            }
           ]
         },
         {
@@ -1095,7 +1129,41 @@
             "kind": "adccommon",
             "version": "v3",
             "block": "ADC_COMMON"
-          }
+          },
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "EXTI11_TRG"
+            }
+          ]
         },
         {
           "name": "COMP1",
@@ -1105,10 +1173,22 @@
             "version": "v1",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK1",
+            "kernel_clock": "PCLK1",
+            "enable": {
+              "register": "APBENR2",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA0",
               "signal": "INM"
+            },
+            {
+              "pin": "PA0",
+              "signal": "INM2"
             },
             {
               "pin": "PA0",
@@ -1118,6 +1198,10 @@
             {
               "pin": "PA1",
               "signal": "INP"
+            },
+            {
+              "pin": "PA1",
+              "signal": "INP2"
             },
             {
               "pin": "PA11",
@@ -1139,6 +1223,10 @@
               "signal": "INM"
             },
             {
+              "pin": "PB1",
+              "signal": "INM0"
+            },
+            {
               "pin": "PB10",
               "signal": "OUT",
               "af": 7
@@ -1146,6 +1234,10 @@
             {
               "pin": "PB2",
               "signal": "INP"
+            },
+            {
+              "pin": "PB2",
+              "signal": "INP1"
             }
           ],
           "interrupts": [
@@ -1163,6 +1255,14 @@
             "version": "v1",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK1",
+            "kernel_clock": "PCLK1",
+            "enable": {
+              "register": "APBENR2",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA12",
@@ -1175,12 +1275,20 @@
             },
             {
               "pin": "PA2",
+              "signal": "INM2"
+            },
+            {
+              "pin": "PA2",
               "signal": "OUT",
               "af": 7
             },
             {
               "pin": "PA3",
               "signal": "INP"
+            },
+            {
+              "pin": "PA3",
+              "signal": "INP2"
             },
             {
               "pin": "PA7",
@@ -1197,8 +1305,16 @@
               "signal": "INM"
             },
             {
+              "pin": "PB3",
+              "signal": "INM0"
+            },
+            {
               "pin": "PB4",
               "signal": "INP"
+            },
+            {
+              "pin": "PB4",
+              "signal": "INP0"
             },
             {
               "pin": "PB5",
@@ -1210,8 +1326,16 @@
               "signal": "INP"
             },
             {
+              "pin": "PB6",
+              "signal": "INP1"
+            },
+            {
               "pin": "PB7",
               "signal": "INM"
+            },
+            {
+              "pin": "PB7",
+              "signal": "INM1"
             }
           ],
           "interrupts": [
@@ -1288,6 +1412,44 @@
               "signal": "CH2",
               "dmamux": "DMAMUX1",
               "request": 9
+            }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "EXTI9_TRG"
             }
           ]
         },
@@ -2438,7 +2600,7 @@
           "address": 1073818624,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -2618,7 +2780,7 @@
           "address": 1073750016,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -2683,7 +2845,7 @@
           "address": 1073823744,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH_CMP"
           },
           "rcc": {
@@ -2813,7 +2975,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -2900,7 +3062,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -2992,7 +3154,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -3139,7 +3301,7 @@
           "address": 1073742848,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -3261,7 +3423,7 @@
           "address": 1073745920,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -3311,7 +3473,7 @@
           "address": 1073746944,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -3585,6 +3747,15 @@
             "kind": "vrefbuf",
             "version": "v1",
             "block": "VREFBUF"
+          }
+        },
+        {
+          "name": "VREFINTCAL",
+          "address": 536835498,
+          "registers": {
+            "kind": "vrefintcal",
+            "version": "v1",
+            "block": "VREFINTCAL"
           }
         },
         {

@@ -721,6 +721,7 @@ pub const SAI1: sai::Sai = unsafe { sai::Sai::from_ptr(0x4200_5800usize as _) };
 pub const SAI2: sai::Sai = unsafe { sai::Sai::from_ptr(0x4200_5c00usize as _) };
 pub const PSSI: pssi::Pssi = unsafe { pssi::Pssi::from_ptr(0x4800_0400usize as _) };
 pub const SDMMC2: sdmmc::Sdmmc = unsafe { sdmmc::Sdmmc::from_ptr(0x4800_2400usize as _) };
+pub const DLYB_SDMMC2: dlyb::Dlyb = unsafe { dlyb::Dlyb::from_ptr(0x4800_2800usize as _) };
 pub const CORDIC: cordic::Cordic = unsafe { cordic::Cordic::from_ptr(0x4800_4400usize as _) };
 pub const RNG: rng::Rng = unsafe { rng::Rng::from_ptr(0x4802_0000usize as _) };
 pub const HASH: hash::Hash = unsafe { hash::Hash::from_ptr(0x4802_0400usize as _) };
@@ -736,6 +737,7 @@ pub const JPEG: jpeg::Jpeg = unsafe { jpeg::Jpeg::from_ptr(0x5200_3000usize as _
 pub const FMC: fmc::Fmc = unsafe { fmc::Fmc::from_ptr(0x5200_4000usize as _) };
 pub const XSPI1: xspi::Xspi = unsafe { xspi::Xspi::from_ptr(0x5200_5000usize as _) };
 pub const SDMMC1: sdmmc::Sdmmc = unsafe { sdmmc::Sdmmc::from_ptr(0x5200_7000usize as _) };
+pub const DLYB_SDMMC1: dlyb::Dlyb = unsafe { dlyb::Dlyb::from_ptr(0x5200_8000usize as _) };
 pub const XSPI2: xspi::Xspi = unsafe { xspi::Xspi::from_ptr(0x5200_a000usize as _) };
 pub const XSPIM: xspim::Xspim = unsafe { xspim::Xspim::from_ptr(0x5200_b400usize as _) };
 pub const MCE1: *mut () = 0x5200_b800usize as _;
@@ -796,6 +798,8 @@ pub mod crs;
 pub mod cryp;
 #[path = "../../peripherals/dbgmcu_h7.rs"]
 pub mod dbgmcu;
+#[path = "../../peripherals/dlyb_v1.rs"]
+pub mod dlyb;
 #[path = "../../peripherals/dma2d_v2.rs"]
 pub mod dma2d;
 #[path = "../../peripherals/dts_v1.rs"]
@@ -828,13 +832,13 @@ pub mod lptim;
 pub mod mdios;
 #[path = "../../peripherals/otg_v1.rs"]
 pub mod otg;
-#[path = "../../peripherals/pssi_v1.rs"]
+#[path = "../../peripherals/pssi_v1_h7rs.rs"]
 pub mod pssi;
 #[path = "../../peripherals/pwr_h7rs.rs"]
 pub mod pwr;
 #[path = "../../peripherals/rcc_h7rs.rs"]
 pub mod rcc;
-#[path = "../../peripherals/rng_v1.rs"]
+#[path = "../../peripherals/rng_v3.rs"]
 pub mod rng;
 #[path = "../../peripherals/rtc_v3_h7rs.rs"]
 pub mod rtc;
@@ -848,7 +852,7 @@ pub mod spdifrx;
 pub mod spi;
 #[path = "../../peripherals/syscfg_h7rs.rs"]
 pub mod syscfg;
-#[path = "../../peripherals/timer_v1.rs"]
+#[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
 #[path = "../../peripherals/ucpd_v1.rs"]
 pub mod ucpd;

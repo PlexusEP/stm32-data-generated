@@ -1099,14 +1099,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "STANDARD",
-                    description: Some("Standard identifier"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "EXTENDED",
+                    name: "Extended",
                     description: Some("Extended identifier"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Standard",
+                    description: Some("Standard identifier"),
+                    value: 0,
                 },
             ],
         },
@@ -1116,44 +1116,44 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "NO_ERROR",
-                    description: Some("No Error"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "STUFF",
-                    description: Some("Stuff Error"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "FORM",
-                    description: Some("Form Error"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "ACK",
+                    name: "Ack",
                     description: Some("Acknowledgment Error"),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "BIT_RECESSIVE",
-                    description: Some("Bit recessive Error"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "BIT_DOMINANT",
+                    name: "BitDominant",
                     description: Some("Bit dominant Error"),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "CRC",
+                    name: "BitRecessive",
+                    description: Some("Bit recessive Error"),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Crc",
                     description: Some("CRC Error"),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "CUSTOM",
+                    name: "Custom",
                     description: Some("Set by software"),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Form",
+                    description: Some("Form Error"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "NoError",
+                    description: Some("No Error"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Stuff",
+                    description: Some("Stuff Error"),
+                    value: 1,
                 },
             ],
         },
@@ -1163,12 +1163,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "DATA",
+                    name: "Data",
                     description: Some("Data frame"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "REMOTE",
+                    name: "Remote",
                     description: Some("Remote frame"),
                     value: 1,
                 },
@@ -1180,12 +1180,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
+                    name: "Normal",
                     description: Some("Normal operation"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SILENT",
+                    name: "Silent",
                     description: Some("Silent Mode"),
                     value: 1,
                 },

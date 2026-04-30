@@ -474,25 +474,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "STOP",
+                    name: "Shutdown",
                     description: Some(
-                        "Selects Stop mode when entering DeepSleep.",
+                        "Selects Shutdown mode when entering DeepSleep.",
                     ),
-                    value: 0,
+                    value: 4,
                 },
                 EnumVariant {
-                    name: "STANDBY",
+                    name: "Standby",
                     description: Some(
                         "Selects Standby mode when entering DeepSleep.",
                     ),
                     value: 3,
                 },
                 EnumVariant {
-                    name: "SHUTDOWN",
+                    name: "Stop",
                     description: Some(
-                        "Selects Shutdown mode when entering DeepSleep.",
+                        "Selects Stop mode when entering DeepSleep.",
                     ),
-                    value: 4,
+                    value: 0,
                 },
             ],
         },

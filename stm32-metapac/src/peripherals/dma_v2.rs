@@ -23,19 +23,19 @@ impl Dma {
     #[inline(always)]
     pub const fn isr(self, n: usize) -> crate::common::Reg<regs::Ixr, crate::common::R> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize + n * 4usize) as _) }
     }
     #[doc = "low interrupt flag clear register"]
     #[inline(always)]
     pub const fn ifcr(self, n: usize) -> crate::common::Reg<regs::Ixr, crate::common::W> {
         assert!(n < 2usize);
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize + n * 4usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize + n * 4usize) as _) }
     }
     #[doc = "Stream cluster: S?CR, S?NDTR, S?M0AR, S?M1AR and S?FCR registers"]
     #[inline(always)]
     pub const fn st(self, n: usize) -> St {
         assert!(n < 8usize);
-        unsafe { St::from_ptr(self.ptr.add(0x10usize + n * 24usize) as _) }
+        unsafe { St::from_ptr(self.ptr.wrapping_add(0x10usize + n * 24usize) as _) }
     }
 }
 #[doc = "Stream cluster: S?CR, S?NDTR, S?M0AR, S?M1AR and S?FCR registers"]
@@ -57,32 +57,32 @@ impl St {
     #[doc = "stream x configuration register"]
     #[inline(always)]
     pub const fn cr(self) -> crate::common::Reg<regs::Cr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
     }
     #[doc = "stream x number of data register"]
     #[inline(always)]
     pub const fn ndtr(self) -> crate::common::Reg<regs::Ndtr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x04usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
     }
     #[doc = "stream x peripheral address register"]
     #[inline(always)]
     pub const fn par(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x08usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
     }
     #[doc = "stream x memory 0 address register"]
     #[inline(always)]
     pub const fn m0ar(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x0cusize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
     #[doc = "stream x memory 1 address register"]
     #[inline(always)]
     pub const fn m1ar(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x10usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x10usize) as _) }
     }
     #[doc = "stream x FIFO control register"]
     #[inline(always)]
     pub const fn fcr(self) -> crate::common::Reg<regs::Fcr, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.add(0x14usize) as _) }
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x14usize) as _) }
     }
 }
 pub mod regs {
@@ -92,6 +92,7 @@ pub mod regs {
     pub struct Cr(pub u32);
     impl Cr {
         #[doc = "Stream enable / flag stream ready when read low"]
+        #[must_use]
         #[inline(always)]
         pub const fn en(&self) -> bool {
             let val = (self.0 >> 0usize) & 0x01;
@@ -99,10 +100,11 @@ pub mod regs {
         }
         #[doc = "Stream enable / flag stream ready when read low"]
         #[inline(always)]
-        pub fn set_en(&mut self, val: bool) {
+        pub const fn set_en(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 0usize)) | (((val as u32) & 0x01) << 0usize);
         }
         #[doc = "Direct mode error interrupt enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn dmeie(&self) -> bool {
             let val = (self.0 >> 1usize) & 0x01;
@@ -110,10 +112,11 @@ pub mod regs {
         }
         #[doc = "Direct mode error interrupt enable"]
         #[inline(always)]
-        pub fn set_dmeie(&mut self, val: bool) {
+        pub const fn set_dmeie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 1usize)) | (((val as u32) & 0x01) << 1usize);
         }
         #[doc = "Transfer error interrupt enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn teie(&self) -> bool {
             let val = (self.0 >> 2usize) & 0x01;
@@ -121,10 +124,11 @@ pub mod regs {
         }
         #[doc = "Transfer error interrupt enable"]
         #[inline(always)]
-        pub fn set_teie(&mut self, val: bool) {
+        pub const fn set_teie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val as u32) & 0x01) << 2usize);
         }
         #[doc = "Half transfer interrupt enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn htie(&self) -> bool {
             let val = (self.0 >> 3usize) & 0x01;
@@ -132,10 +136,11 @@ pub mod regs {
         }
         #[doc = "Half transfer interrupt enable"]
         #[inline(always)]
-        pub fn set_htie(&mut self, val: bool) {
+        pub const fn set_htie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 3usize)) | (((val as u32) & 0x01) << 3usize);
         }
         #[doc = "Transfer complete interrupt enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn tcie(&self) -> bool {
             let val = (self.0 >> 4usize) & 0x01;
@@ -143,10 +148,11 @@ pub mod regs {
         }
         #[doc = "Transfer complete interrupt enable"]
         #[inline(always)]
-        pub fn set_tcie(&mut self, val: bool) {
+        pub const fn set_tcie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 4usize)) | (((val as u32) & 0x01) << 4usize);
         }
         #[doc = "Peripheral flow controller"]
+        #[must_use]
         #[inline(always)]
         pub const fn pfctrl(&self) -> super::vals::Pfctrl {
             let val = (self.0 >> 5usize) & 0x01;
@@ -154,10 +160,11 @@ pub mod regs {
         }
         #[doc = "Peripheral flow controller"]
         #[inline(always)]
-        pub fn set_pfctrl(&mut self, val: super::vals::Pfctrl) {
+        pub const fn set_pfctrl(&mut self, val: super::vals::Pfctrl) {
             self.0 = (self.0 & !(0x01 << 5usize)) | (((val.to_bits() as u32) & 0x01) << 5usize);
         }
         #[doc = "Data transfer direction"]
+        #[must_use]
         #[inline(always)]
         pub const fn dir(&self) -> super::vals::Dir {
             let val = (self.0 >> 6usize) & 0x03;
@@ -165,10 +172,11 @@ pub mod regs {
         }
         #[doc = "Data transfer direction"]
         #[inline(always)]
-        pub fn set_dir(&mut self, val: super::vals::Dir) {
+        pub const fn set_dir(&mut self, val: super::vals::Dir) {
             self.0 = (self.0 & !(0x03 << 6usize)) | (((val.to_bits() as u32) & 0x03) << 6usize);
         }
         #[doc = "Circular mode enabled"]
+        #[must_use]
         #[inline(always)]
         pub const fn circ(&self) -> bool {
             let val = (self.0 >> 8usize) & 0x01;
@@ -176,10 +184,11 @@ pub mod regs {
         }
         #[doc = "Circular mode enabled"]
         #[inline(always)]
-        pub fn set_circ(&mut self, val: bool) {
+        pub const fn set_circ(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 8usize)) | (((val as u32) & 0x01) << 8usize);
         }
         #[doc = "Peripheral increment mode enabled"]
+        #[must_use]
         #[inline(always)]
         pub const fn pinc(&self) -> bool {
             let val = (self.0 >> 9usize) & 0x01;
@@ -187,10 +196,11 @@ pub mod regs {
         }
         #[doc = "Peripheral increment mode enabled"]
         #[inline(always)]
-        pub fn set_pinc(&mut self, val: bool) {
+        pub const fn set_pinc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 9usize)) | (((val as u32) & 0x01) << 9usize);
         }
         #[doc = "Memory increment mode enabled"]
+        #[must_use]
         #[inline(always)]
         pub const fn minc(&self) -> bool {
             let val = (self.0 >> 10usize) & 0x01;
@@ -198,10 +208,11 @@ pub mod regs {
         }
         #[doc = "Memory increment mode enabled"]
         #[inline(always)]
-        pub fn set_minc(&mut self, val: bool) {
+        pub const fn set_minc(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 10usize)) | (((val as u32) & 0x01) << 10usize);
         }
         #[doc = "Peripheral data size"]
+        #[must_use]
         #[inline(always)]
         pub const fn psize(&self) -> super::vals::Size {
             let val = (self.0 >> 11usize) & 0x03;
@@ -209,10 +220,11 @@ pub mod regs {
         }
         #[doc = "Peripheral data size"]
         #[inline(always)]
-        pub fn set_psize(&mut self, val: super::vals::Size) {
+        pub const fn set_psize(&mut self, val: super::vals::Size) {
             self.0 = (self.0 & !(0x03 << 11usize)) | (((val.to_bits() as u32) & 0x03) << 11usize);
         }
         #[doc = "Memory data size"]
+        #[must_use]
         #[inline(always)]
         pub const fn msize(&self) -> super::vals::Size {
             let val = (self.0 >> 13usize) & 0x03;
@@ -220,10 +232,11 @@ pub mod regs {
         }
         #[doc = "Memory data size"]
         #[inline(always)]
-        pub fn set_msize(&mut self, val: super::vals::Size) {
+        pub const fn set_msize(&mut self, val: super::vals::Size) {
             self.0 = (self.0 & !(0x03 << 13usize)) | (((val.to_bits() as u32) & 0x03) << 13usize);
         }
         #[doc = "Peripheral increment offset size"]
+        #[must_use]
         #[inline(always)]
         pub const fn pincos(&self) -> super::vals::Pincos {
             let val = (self.0 >> 15usize) & 0x01;
@@ -231,10 +244,11 @@ pub mod regs {
         }
         #[doc = "Peripheral increment offset size"]
         #[inline(always)]
-        pub fn set_pincos(&mut self, val: super::vals::Pincos) {
+        pub const fn set_pincos(&mut self, val: super::vals::Pincos) {
             self.0 = (self.0 & !(0x01 << 15usize)) | (((val.to_bits() as u32) & 0x01) << 15usize);
         }
         #[doc = "Priority level"]
+        #[must_use]
         #[inline(always)]
         pub const fn pl(&self) -> super::vals::Pl {
             let val = (self.0 >> 16usize) & 0x03;
@@ -242,10 +256,11 @@ pub mod regs {
         }
         #[doc = "Priority level"]
         #[inline(always)]
-        pub fn set_pl(&mut self, val: super::vals::Pl) {
+        pub const fn set_pl(&mut self, val: super::vals::Pl) {
             self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
         }
         #[doc = "Double buffer mode enabled"]
+        #[must_use]
         #[inline(always)]
         pub const fn dbm(&self) -> bool {
             let val = (self.0 >> 18usize) & 0x01;
@@ -253,10 +268,11 @@ pub mod regs {
         }
         #[doc = "Double buffer mode enabled"]
         #[inline(always)]
-        pub fn set_dbm(&mut self, val: bool) {
+        pub const fn set_dbm(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 18usize)) | (((val as u32) & 0x01) << 18usize);
         }
         #[doc = "Current target (only in double buffer mode)"]
+        #[must_use]
         #[inline(always)]
         pub const fn ct(&self) -> super::vals::Ct {
             let val = (self.0 >> 19usize) & 0x01;
@@ -264,10 +280,11 @@ pub mod regs {
         }
         #[doc = "Current target (only in double buffer mode)"]
         #[inline(always)]
-        pub fn set_ct(&mut self, val: super::vals::Ct) {
+        pub const fn set_ct(&mut self, val: super::vals::Ct) {
             self.0 = (self.0 & !(0x01 << 19usize)) | (((val.to_bits() as u32) & 0x01) << 19usize);
         }
         #[doc = "Peripheral burst transfer configuration"]
+        #[must_use]
         #[inline(always)]
         pub const fn pburst(&self) -> super::vals::Burst {
             let val = (self.0 >> 21usize) & 0x03;
@@ -275,10 +292,11 @@ pub mod regs {
         }
         #[doc = "Peripheral burst transfer configuration"]
         #[inline(always)]
-        pub fn set_pburst(&mut self, val: super::vals::Burst) {
+        pub const fn set_pburst(&mut self, val: super::vals::Burst) {
             self.0 = (self.0 & !(0x03 << 21usize)) | (((val.to_bits() as u32) & 0x03) << 21usize);
         }
         #[doc = "Memory burst transfer configuration"]
+        #[must_use]
         #[inline(always)]
         pub const fn mburst(&self) -> super::vals::Burst {
             let val = (self.0 >> 23usize) & 0x03;
@@ -286,10 +304,11 @@ pub mod regs {
         }
         #[doc = "Memory burst transfer configuration"]
         #[inline(always)]
-        pub fn set_mburst(&mut self, val: super::vals::Burst) {
+        pub const fn set_mburst(&mut self, val: super::vals::Burst) {
             self.0 = (self.0 & !(0x03 << 23usize)) | (((val.to_bits() as u32) & 0x03) << 23usize);
         }
         #[doc = "Channel selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn chsel(&self) -> u8 {
             let val = (self.0 >> 25usize) & 0x0f;
@@ -297,7 +316,7 @@ pub mod regs {
         }
         #[doc = "Channel selection"]
         #[inline(always)]
-        pub fn set_chsel(&mut self, val: u8) {
+        pub const fn set_chsel(&mut self, val: u8) {
             self.0 = (self.0 & !(0x0f << 25usize)) | (((val as u32) & 0x0f) << 25usize);
         }
     }
@@ -344,6 +363,7 @@ pub mod regs {
     pub struct Fcr(pub u32);
     impl Fcr {
         #[doc = "FIFO threshold selection"]
+        #[must_use]
         #[inline(always)]
         pub const fn fth(&self) -> super::vals::Fth {
             let val = (self.0 >> 0usize) & 0x03;
@@ -351,10 +371,11 @@ pub mod regs {
         }
         #[doc = "FIFO threshold selection"]
         #[inline(always)]
-        pub fn set_fth(&mut self, val: super::vals::Fth) {
+        pub const fn set_fth(&mut self, val: super::vals::Fth) {
             self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
         }
         #[doc = "Direct mode disable"]
+        #[must_use]
         #[inline(always)]
         pub const fn dmdis(&self) -> super::vals::Dmdis {
             let val = (self.0 >> 2usize) & 0x01;
@@ -362,10 +383,11 @@ pub mod regs {
         }
         #[doc = "Direct mode disable"]
         #[inline(always)]
-        pub fn set_dmdis(&mut self, val: super::vals::Dmdis) {
+        pub const fn set_dmdis(&mut self, val: super::vals::Dmdis) {
             self.0 = (self.0 & !(0x01 << 2usize)) | (((val.to_bits() as u32) & 0x01) << 2usize);
         }
         #[doc = "FIFO status"]
+        #[must_use]
         #[inline(always)]
         pub const fn fs(&self) -> super::vals::Fs {
             let val = (self.0 >> 3usize) & 0x07;
@@ -373,10 +395,11 @@ pub mod regs {
         }
         #[doc = "FIFO status"]
         #[inline(always)]
-        pub fn set_fs(&mut self, val: super::vals::Fs) {
+        pub const fn set_fs(&mut self, val: super::vals::Fs) {
             self.0 = (self.0 & !(0x07 << 3usize)) | (((val.to_bits() as u32) & 0x07) << 3usize);
         }
         #[doc = "FIFO error interrupt enable"]
+        #[must_use]
         #[inline(always)]
         pub const fn feie(&self) -> bool {
             let val = (self.0 >> 7usize) & 0x01;
@@ -384,7 +407,7 @@ pub mod regs {
         }
         #[doc = "FIFO error interrupt enable"]
         #[inline(always)]
-        pub fn set_feie(&mut self, val: bool) {
+        pub const fn set_feie(&mut self, val: bool) {
             self.0 = (self.0 & !(0x01 << 7usize)) | (((val as u32) & 0x01) << 7usize);
         }
     }
@@ -423,6 +446,7 @@ pub mod regs {
     pub struct Ixr(pub u32);
     impl Ixr {
         #[doc = "Stream x FIFO error interrupt flag (x=3..0)"]
+        #[must_use]
         #[inline(always)]
         pub const fn feif(&self, n: usize) -> bool {
             assert!(n < 4usize);
@@ -432,12 +456,13 @@ pub mod regs {
         }
         #[doc = "Stream x FIFO error interrupt flag (x=3..0)"]
         #[inline(always)]
-        pub fn set_feif(&mut self, n: usize, val: bool) {
+        pub const fn set_feif(&mut self, n: usize, val: bool) {
             assert!(n < 4usize);
             let offs = 0usize + ([0usize, 6usize, 16usize, 22usize][n] as usize);
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Stream x direct mode error interrupt flag (x=3..0)"]
+        #[must_use]
         #[inline(always)]
         pub const fn dmeif(&self, n: usize) -> bool {
             assert!(n < 4usize);
@@ -447,12 +472,13 @@ pub mod regs {
         }
         #[doc = "Stream x direct mode error interrupt flag (x=3..0)"]
         #[inline(always)]
-        pub fn set_dmeif(&mut self, n: usize, val: bool) {
+        pub const fn set_dmeif(&mut self, n: usize, val: bool) {
             assert!(n < 4usize);
             let offs = 2usize + ([0usize, 6usize, 16usize, 22usize][n] as usize);
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Stream x transfer error interrupt flag (x=3..0)"]
+        #[must_use]
         #[inline(always)]
         pub const fn teif(&self, n: usize) -> bool {
             assert!(n < 4usize);
@@ -462,12 +488,13 @@ pub mod regs {
         }
         #[doc = "Stream x transfer error interrupt flag (x=3..0)"]
         #[inline(always)]
-        pub fn set_teif(&mut self, n: usize, val: bool) {
+        pub const fn set_teif(&mut self, n: usize, val: bool) {
             assert!(n < 4usize);
             let offs = 3usize + ([0usize, 6usize, 16usize, 22usize][n] as usize);
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Stream x half transfer interrupt flag (x=3..0)"]
+        #[must_use]
         #[inline(always)]
         pub const fn htif(&self, n: usize) -> bool {
             assert!(n < 4usize);
@@ -477,12 +504,13 @@ pub mod regs {
         }
         #[doc = "Stream x half transfer interrupt flag (x=3..0)"]
         #[inline(always)]
-        pub fn set_htif(&mut self, n: usize, val: bool) {
+        pub const fn set_htif(&mut self, n: usize, val: bool) {
             assert!(n < 4usize);
             let offs = 4usize + ([0usize, 6usize, 16usize, 22usize][n] as usize);
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
         }
         #[doc = "Stream x transfer complete interrupt flag (x = 3..0)"]
+        #[must_use]
         #[inline(always)]
         pub const fn tcif(&self, n: usize) -> bool {
             assert!(n < 4usize);
@@ -492,7 +520,7 @@ pub mod regs {
         }
         #[doc = "Stream x transfer complete interrupt flag (x = 3..0)"]
         #[inline(always)]
-        pub fn set_tcif(&mut self, n: usize, val: bool) {
+        pub const fn set_tcif(&mut self, n: usize, val: bool) {
             assert!(n < 4usize);
             let offs = 5usize + ([0usize, 6usize, 16usize, 22usize][n] as usize);
             self.0 = (self.0 & !(0x01 << offs)) | (((val as u32) & 0x01) << offs);
@@ -542,6 +570,7 @@ pub mod regs {
     pub struct Ndtr(pub u32);
     impl Ndtr {
         #[doc = "Number of data items to transfer"]
+        #[must_use]
         #[inline(always)]
         pub const fn ndt(&self) -> u16 {
             let val = (self.0 >> 0usize) & 0xffff;
@@ -549,7 +578,7 @@ pub mod regs {
         }
         #[doc = "Number of data items to transfer"]
         #[inline(always)]
-        pub fn set_ndt(&mut self, val: u16) {
+        pub const fn set_ndt(&mut self, val: u16) {
             self.0 = (self.0 & !(0xffff << 0usize)) | (((val as u32) & 0xffff) << 0usize);
         }
     }
@@ -577,13 +606,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Burst {
         #[doc = "Single transfer"]
-        SINGLE = 0x0,
+        Single = 0x0,
         #[doc = "Incremental burst of 4 beats"]
-        INCR4 = 0x01,
+        Incr4 = 0x01,
         #[doc = "Incremental burst of 8 beats"]
-        INCR8 = 0x02,
+        Incr8 = 0x02,
         #[doc = "Incremental burst of 16 beats"]
-        INCR16 = 0x03,
+        Incr16 = 0x03,
     }
     impl Burst {
         #[inline(always)]
@@ -612,9 +641,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Ct {
         #[doc = "The current target memory is Memory 0"]
-        MEMORY0 = 0x0,
+        Memory0 = 0x0,
         #[doc = "The current target memory is Memory 1"]
-        MEMORY1 = 0x01,
+        Memory1 = 0x01,
     }
     impl Ct {
         #[inline(always)]
@@ -643,11 +672,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dir {
         #[doc = "Peripheral-to-memory"]
-        PERIPHERAL_TO_MEMORY = 0x0,
+        PeripheralToMemory = 0x0,
         #[doc = "Memory-to-peripheral"]
-        MEMORY_TO_PERIPHERAL = 0x01,
+        MemoryToPeripheral = 0x01,
         #[doc = "Memory-to-memory"]
-        MEMORY_TO_MEMORY = 0x02,
+        MemoryToMemory = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Dir {
@@ -677,9 +706,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Dmdis {
         #[doc = "Direct mode is enabled"]
-        ENABLED = 0x0,
+        Enabled = 0x0,
         #[doc = "Direct mode is disabled"]
-        DISABLED = 0x01,
+        Disabled = 0x01,
     }
     impl Dmdis {
         #[inline(always)]
@@ -708,17 +737,17 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fs {
         #[doc = "0 < fifo_level < 1/4"]
-        QUARTER1 = 0x0,
+        Quarter1 = 0x0,
         #[doc = "1/4 <= fifo_level < 1/2"]
-        QUARTER2 = 0x01,
+        Quarter2 = 0x01,
         #[doc = "1/2 <= fifo_level < 3/4"]
-        QUARTER3 = 0x02,
+        Quarter3 = 0x02,
         #[doc = "3/4 <= fifo_level < full"]
-        QUARTER4 = 0x03,
+        Quarter4 = 0x03,
         #[doc = "FIFO is empty"]
-        EMPTY = 0x04,
+        Empty = 0x04,
         #[doc = "FIFO is full"]
-        FULL = 0x05,
+        Full = 0x05,
         _RESERVED_6 = 0x06,
         _RESERVED_7 = 0x07,
     }
@@ -749,13 +778,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Fth {
         #[doc = "1/4 full FIFO"]
-        QUARTER = 0x0,
+        Quarter = 0x0,
         #[doc = "1/2 full FIFO"]
-        HALF = 0x01,
+        Half = 0x01,
         #[doc = "3/4 full FIFO"]
-        THREE_QUARTERS = 0x02,
+        ThreeQuarters = 0x02,
         #[doc = "Full FIFO"]
-        FULL = 0x03,
+        Full = 0x03,
     }
     impl Fth {
         #[inline(always)]
@@ -784,9 +813,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pfctrl {
         #[doc = "The DMA is the flow controller"]
-        DMA = 0x0,
+        Dma = 0x0,
         #[doc = "The peripheral is the flow controller"]
-        PERIPHERAL = 0x01,
+        Peripheral = 0x01,
     }
     impl Pfctrl {
         #[inline(always)]
@@ -815,9 +844,9 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pincos {
         #[doc = "The offset size for the peripheral address calculation is linked to the PSIZE"]
-        PSIZE = 0x0,
+        Psize = 0x0,
         #[doc = "The offset size for the peripheral address calculation is fixed to 4 (32-bit alignment)"]
-        FIXED4 = 0x01,
+        Fixed4 = 0x01,
     }
     impl Pincos {
         #[inline(always)]
@@ -846,13 +875,13 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Pl {
         #[doc = "Low"]
-        LOW = 0x0,
+        Low = 0x0,
         #[doc = "Medium"]
-        MEDIUM = 0x01,
+        Medium = 0x01,
         #[doc = "High"]
-        HIGH = 0x02,
+        High = 0x02,
         #[doc = "Very high"]
-        VERY_HIGH = 0x03,
+        VeryHigh = 0x03,
     }
     impl Pl {
         #[inline(always)]
@@ -881,11 +910,11 @@ pub mod vals {
     #[cfg_attr(feature = "defmt", derive(defmt::Format))]
     pub enum Size {
         #[doc = "Byte (8-bit)"]
-        BITS8 = 0x0,
+        Bits8 = 0x0,
         #[doc = "Half-word (16-bit)"]
-        BITS16 = 0x01,
+        Bits16 = 0x01,
         #[doc = "Word (32-bit)"]
-        BITS32 = 0x02,
+        Bits32 = 0x02,
         _RESERVED_3 = 0x03,
     }
     impl Size {

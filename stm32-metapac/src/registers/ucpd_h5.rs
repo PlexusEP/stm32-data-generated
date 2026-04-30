@@ -1650,18 +1650,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "SOURCE",
-                    description: Some(
-                        "Source",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "SINK",
+                    name: "Sink",
                     description: Some(
                         "Sink",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Source",
+                    description: Some(
+                        "Source",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -1671,32 +1671,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "DISABLED",
+                    name: "Both",
                     description: Some(
-                        "Disable both PHYs",
+                        "Enable CC1 and CC2 PHY",
                     ),
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "CC1",
+                    name: "Cc1",
                     description: Some(
                         "Enable CC1 PHY",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "CC2",
+                    name: "Cc2",
                     description: Some(
                         "Enable CC2 PHY",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "BOTH",
+                    name: "Disabled",
                     description: Some(
-                        "Enable CC1 and CC2 PHY",
+                        "Disable both PHYs",
                     ),
-                    value: 3,
+                    value: 0,
                 },
             ],
         },
@@ -1706,14 +1706,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "CC1",
+                    name: "Cc1",
                     description: Some(
                         "Use CC1 IO for Power Delivery communication",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "CC2",
+                    name: "Cc2",
                     description: Some(
                         "Use CC2 IO for Power Delivery communication",
                     ),
@@ -1727,39 +1727,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "DIV1",
+                    name: "Div1",
                     description: Some(
                         "1 (bypass)",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "DIV2",
+                    name: "Div16",
+                    description: Some(
+                        "16",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Div2",
                     description: Some(
                         "2",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "DIV4",
+                    name: "Div4",
                     description: Some(
                         "4",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "DIV8",
+                    name: "Div8",
                     description: Some(
                         "8",
                     ),
                     value: 3,
-                },
-                EnumVariant {
-                    name: "DIV16",
-                    description: Some(
-                        "16",
-                    ),
-                    value: 4,
                 },
             ],
         },
@@ -1769,60 +1769,60 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "SOP",
-                    description: Some(
-                        "SOP code detected in receiver",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "SOP_PRIME",
-                    description: Some(
-                        "SOP' code detected in receiver",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "SOP_DOUBLE_PRIME",
-                    description: Some(
-                        "SOP'' code detected in receiver",
-                    ),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "SOP_PRIME_DEBUG",
-                    description: Some(
-                        "SOP'_Debug detected in receiver",
-                    ),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "SOP_DOUBLE_PRIME_DEBUG",
-                    description: Some(
-                        "SOP''_Debug detected in receiver",
-                    ),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "CABLE_RESET",
+                    name: "CableReset",
                     description: Some(
                         "Cable Reset detected in receiver",
                     ),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "EXT1",
+                    name: "Ext1",
                     description: Some(
                         "SOP extension#1 detected in receiver",
                     ),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "EXT2",
+                    name: "Ext2",
                     description: Some(
                         "SOP extension#2 detected in receiver",
                     ),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Sop",
+                    description: Some(
+                        "SOP code detected in receiver",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "SopDoublePrime",
+                    description: Some(
+                        "SOP'' code detected in receiver",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "SopDoublePrimeDebug",
+                    description: Some(
+                        "SOP''_Debug detected in receiver",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "SopPrime",
+                    description: Some(
+                        "SOP' code detected in receiver",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "SopPrimeDebug",
+                    description: Some(
+                        "SOP'_Debug detected in receiver",
+                    ),
+                    value: 3,
                 },
             ],
         },
@@ -1832,39 +1832,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "NONE",
-                    description: Some(
-                        "No K‑code corrupted",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "FIRST",
+                    name: "First",
                     description: Some(
                         "First K‑code corrupted",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "SECOND",
+                    name: "Fourth",
+                    description: Some(
+                        "Fourth K‑code corrupted",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "None",
+                    description: Some(
+                        "No K‑code corrupted",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Second",
                     description: Some(
                         "Second K‑code corrupted",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "THIRD",
+                    name: "Third",
                     description: Some(
                         "Third K‑code corrupted",
                     ),
                     value: 3,
-                },
-                EnumVariant {
-                    name: "FOURTH",
-                    description: Some(
-                        "Fourth K‑code corrupted",
-                    ),
-                    value: 4,
                 },
             ],
         },
@@ -1874,25 +1874,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "PACKET",
+                    name: "Bist",
                     description: Some(
-                        "Transmission of Tx packet previously defined in other registers",
+                        "BIST test sequence (BIST Carrier Mode 2)",
                     ),
-                    value: 0,
+                    value: 2,
                 },
                 EnumVariant {
-                    name: "CABLE_RESET",
+                    name: "CableReset",
                     description: Some(
                         "Cable Reset sequence",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "BIST",
+                    name: "Packet",
                     description: Some(
-                        "BIST test sequence (BIST Carrier Mode 2)",
+                        "Transmission of Tx packet previously defined in other registers",
                     ),
-                    value: 2,
+                    value: 0,
                 },
             ],
         },
@@ -1902,32 +1902,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "LOWEST",
-                    description: Some(
-                        "Lowest",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "LOW",
-                    description: Some(
-                        "Low",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "HIGH",
+                    name: "High",
                     description: Some(
                         "High",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "HIGHEST",
+                    name: "Highest",
                     description: Some(
                         "Highest",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "Low",
+                    description: Some(
+                        "Low",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Lowest",
+                    description: Some(
+                        "Lowest",
+                    ),
+                    value: 0,
                 },
             ],
         },

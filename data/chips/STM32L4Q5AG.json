@@ -2998,6 +2998,36 @@
               "dmamux": "DMAMUX1",
               "request": 8
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG0",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM5_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -5346,7 +5376,7 @@
               "interrupt": "LTDC_ER"
             },
             {
-              "signal": "GLOBAL",
+              "signal": "LO",
               "interrupt": "LTDC"
             }
           ]
@@ -5942,6 +5972,18 @@
             "kind": "pssi",
             "version": "v1",
             "block": "PSSI"
+          },
+          "rcc": {
+            "bus_clock": "HCLK2",
+            "kernel_clock": "HCLK2",
+            "enable": {
+              "register": "AHB2ENR",
+              "field": "DCMIEN"
+            },
+            "reset": {
+              "register": "AHB2RSTR",
+              "field": "DCMIRST"
+            }
           },
           "pins": [
             {

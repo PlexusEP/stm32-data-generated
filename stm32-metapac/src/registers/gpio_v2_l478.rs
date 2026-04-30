@@ -555,18 +555,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "LOW",
-                    description: Some(
-                        "Input is logic low",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "HIGH",
+                    name: "High",
                     description: Some(
                         "Input is logic high",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Low",
+                    description: Some(
+                        "Input is logic low",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -576,32 +576,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "INPUT",
-                    description: Some(
-                        "Input mode (reset state)",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "OUTPUT",
-                    description: Some(
-                        "General purpose output mode",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "ALTERNATE",
+                    name: "Alternate",
                     description: Some(
                         "Alternate function mode",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "ANALOG",
+                    name: "Analog",
                     description: Some(
                         "Analog mode",
                     ),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "Input",
+                    description: Some(
+                        "Input mode (reset state)",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Output",
+                    description: Some(
+                        "General purpose output mode",
+                    ),
+                    value: 1,
                 },
             ],
         },
@@ -611,18 +611,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "LOW",
-                    description: Some(
-                        "Set output to logic low",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "HIGH",
+                    name: "High",
                     description: Some(
                         "Set output to logic high",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Low",
+                    description: Some(
+                        "Set output to logic low",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -632,28 +632,28 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "LOW_SPEED",
-                    description: Some(
-                        "Low speed",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "MEDIUM_SPEED",
-                    description: Some(
-                        "Medium speed",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "HIGH_SPEED",
+                    name: "HighSpeed",
                     description: Some(
                         "High speed",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "VERY_HIGH_SPEED",
+                    name: "LowSpeed",
+                    description: Some(
+                        "Low speed",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "MediumSpeed",
+                    description: Some(
+                        "Medium speed",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "VeryHighSpeed",
                     description: Some(
                         "Very high speed",
                     ),
@@ -667,18 +667,18 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "PUSH_PULL",
-                    description: Some(
-                        "Output push-pull (reset state)",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "OPEN_DRAIN",
+                    name: "OpenDrain",
                     description: Some(
                         "Output open-drain",
                     ),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "PushPull",
+                    description: Some(
+                        "Output push-pull (reset state)",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -688,25 +688,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "FLOATING",
+                    name: "Floating",
                     description: Some(
                         "No pull-up, pull-down",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "PULL_UP",
-                    description: Some(
-                        "Pull-up",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "PULL_DOWN",
+                    name: "PullDown",
                     description: Some(
                         "Pull-down",
                     ),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "PullUp",
+                    description: Some(
+                        "Pull-up",
+                    ),
+                    value: 1,
                 },
             ],
         },

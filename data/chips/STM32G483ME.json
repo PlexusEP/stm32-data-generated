@@ -1416,6 +1416,252 @@
               "dmamux": "DMAMUX1",
               "request": 5
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM2_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "TIM4_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "EXTI11_TRG"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG8",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG9",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG10",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG11",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG12",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG13",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG14",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG15",
+              "source": "TIM3_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG18",
+              "source": "TIM20_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG19",
+              "source": "TIM20_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG20",
+              "source": "TIM20_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG21",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_EXT_TRG22",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_EXT_TRG23",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_EXT_TRG24",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_EXT_TRG25",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_EXT_TRG26",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_EXT_TRG27",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_EXT_TRG28",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_EXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_EXT_TRG30",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG0",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG3",
+              "source": "TIM2_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG4",
+              "source": "TIM3_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG6",
+              "source": "EXTI15_TRG"
+            },
+            {
+              "signal": "ADC_JEXT_TRG7",
+              "source": "TIM8_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG8",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG9",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG10",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG11",
+              "source": "TIM3_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG12",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG13",
+              "source": "TIM3_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG14",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG15",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG18",
+              "source": "TIM20_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG21",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_JEXT_TRG22",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_JEXT_TRG23",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_JEXT_TRG24",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_JEXT_TRG25",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_JEXT_TRG26",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_JEXT_TRG27",
+              "source": "TIM16_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_JEXT_TRG30",
+              "source": "TIM7_TRGO"
+            }
           ]
         },
         {
@@ -1580,6 +1826,252 @@
               "dmamux": "DMAMUX1",
               "request": 36
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM2_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "TIM4_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "EXTI11_TRG"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG8",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG9",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG10",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG11",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG12",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG13",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG14",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG15",
+              "source": "TIM3_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG18",
+              "source": "TIM20_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG19",
+              "source": "TIM20_CC2"
+            },
+            {
+              "signal": "ADC_EXT_TRG20",
+              "source": "TIM20_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG21",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_EXT_TRG22",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_EXT_TRG23",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_EXT_TRG24",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_EXT_TRG25",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_EXT_TRG26",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_EXT_TRG27",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_EXT_TRG28",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_EXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_EXT_TRG30",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG0",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG3",
+              "source": "TIM2_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG4",
+              "source": "TIM3_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG6",
+              "source": "EXTI15_TRG"
+            },
+            {
+              "signal": "ADC_JEXT_TRG7",
+              "source": "TIM8_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG8",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG9",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG10",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG11",
+              "source": "TIM3_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG12",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG13",
+              "source": "TIM3_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG14",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG15",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG18",
+              "source": "TIM20_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG21",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_JEXT_TRG22",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_JEXT_TRG23",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_JEXT_TRG24",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_JEXT_TRG25",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_JEXT_TRG26",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_JEXT_TRG27",
+              "source": "TIM16_CC1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_JEXT_TRG30",
+              "source": "TIM7_TRGO"
+            }
           ]
         },
         {
@@ -1698,6 +2190,256 @@
               "signal": "ADC3",
               "dmamux": "DMAMUX1",
               "request": 37
+            }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM3_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM2_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM8_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "EXTI2_TRG"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "TIM4_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG8",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG9",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG10",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG11",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG12",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG13",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG14",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG15",
+              "source": "TIM2_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG18",
+              "source": "TIM20_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_EXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_EXT_TRG21",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_EXT_TRG22",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_EXT_TRG23",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_EXT_TRG24",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_EXT_TRG25",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_EXT_TRG26",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_EXT_TRG27",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_EXT_TRG28",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_EXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_EXT_TRG30",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG0",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG3",
+              "source": "TIM8_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG4",
+              "source": "TIM4_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG6",
+              "source": "TIM4_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG7",
+              "source": "TIM8_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG8",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG9",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG10",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG11",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG12",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG13",
+              "source": "EXTI3_TRG"
+            },
+            {
+              "signal": "ADC_JEXT_TRG14",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG15",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG18",
+              "source": "TIM20_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG21",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_JEXT_TRG22",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_JEXT_TRG23",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_JEXT_TRG24",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_JEXT_TRG25",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_JEXT_TRG26",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_JEXT_TRG27",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG28",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_JEXT_TRG30",
+              "source": "TIM7_TRGO"
             }
           ]
         },
@@ -1847,6 +2589,256 @@
               "dmamux": "DMAMUX1",
               "request": 38
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM3_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM2_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM8_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "EXTI2_TRG"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "TIM4_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG8",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG9",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG10",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG11",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG12",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG13",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG14",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG15",
+              "source": "TIM2_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG18",
+              "source": "TIM20_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_EXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_EXT_TRG21",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_EXT_TRG22",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_EXT_TRG23",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_EXT_TRG24",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_EXT_TRG25",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_EXT_TRG26",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_EXT_TRG27",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_EXT_TRG28",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_EXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_EXT_TRG30",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG0",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG3",
+              "source": "TIM8_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG4",
+              "source": "TIM4_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG6",
+              "source": "TIM4_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG7",
+              "source": "TIM8_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG8",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG9",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG10",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG11",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG12",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG13",
+              "source": "EXTI3_TRG"
+            },
+            {
+              "signal": "ADC_JEXT_TRG14",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG15",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG18",
+              "source": "TIM20_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG21",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_JEXT_TRG22",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_JEXT_TRG23",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_JEXT_TRG24",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_JEXT_TRG25",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_JEXT_TRG26",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_JEXT_TRG27",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG28",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_JEXT_TRG30",
+              "source": "TIM7_TRGO"
+            }
           ]
         },
         {
@@ -1958,6 +2950,256 @@
               "dmamux": "DMAMUX1",
               "request": 39
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM3_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM2_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG2",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM8_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG4",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG5",
+              "source": "EXTI2_TRG"
+            },
+            {
+              "signal": "ADC_EXT_TRG6",
+              "source": "TIM4_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG8",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG9",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG10",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG11",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG12",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG13",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG14",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG15",
+              "source": "TIM2_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG18",
+              "source": "TIM20_CC1"
+            },
+            {
+              "signal": "ADC_EXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_EXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_EXT_TRG21",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_EXT_TRG22",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_EXT_TRG23",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_EXT_TRG24",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_EXT_TRG25",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_EXT_TRG26",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_EXT_TRG27",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_EXT_TRG28",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_EXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_EXT_TRG30",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG0",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG3",
+              "source": "TIM8_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG4",
+              "source": "TIM4_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG6",
+              "source": "TIM4_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG7",
+              "source": "TIM8_CC4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG8",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG9",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG10",
+              "source": "TIM8_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG11",
+              "source": "TIM1_CC3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG12",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG13",
+              "source": "EXTI3_TRG"
+            },
+            {
+              "signal": "ADC_JEXT_TRG14",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG15",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG16",
+              "source": "TIM20_TRGO"
+            },
+            {
+              "signal": "ADC_JEXT_TRG17",
+              "source": "TIM20_TRGO2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG18",
+              "source": "TIM20_CC2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG19",
+              "source": "HRTIM_ADC_TRG2"
+            },
+            {
+              "signal": "ADC_JEXT_TRG20",
+              "source": "HRTIM_ADC_TRG4"
+            },
+            {
+              "signal": "ADC_JEXT_TRG21",
+              "source": "HRTIM_ADC_TRG5"
+            },
+            {
+              "signal": "ADC_JEXT_TRG22",
+              "source": "HRTIM_ADC_TRG6"
+            },
+            {
+              "signal": "ADC_JEXT_TRG23",
+              "source": "HRTIM_ADC_TRG7"
+            },
+            {
+              "signal": "ADC_JEXT_TRG24",
+              "source": "HRTIM_ADC_TRG8"
+            },
+            {
+              "signal": "ADC_JEXT_TRG25",
+              "source": "HRTIM_ADC_TRG9"
+            },
+            {
+              "signal": "ADC_JEXT_TRG26",
+              "source": "HRTIM_ADC_TRG10"
+            },
+            {
+              "signal": "ADC_JEXT_TRG27",
+              "source": "HRTIM_ADC_TRG1"
+            },
+            {
+              "signal": "ADC_JEXT_TRG28",
+              "source": "HRTIM_ADC_TRG3"
+            },
+            {
+              "signal": "ADC_JEXT_TRG29",
+              "source": "LPTIMOUT"
+            },
+            {
+              "signal": "ADC_JEXT_TRG30",
+              "source": "TIM7_TRGO"
+            }
           ]
         },
         {
@@ -2007,10 +3249,22 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA0",
               "signal": "INM"
+            },
+            {
+              "pin": "PA0",
+              "signal": "INM1"
             },
             {
               "pin": "PA0",
@@ -2022,6 +3276,10 @@
               "signal": "INP"
             },
             {
+              "pin": "PA1",
+              "signal": "INP0"
+            },
+            {
               "pin": "PA11",
               "signal": "OUT",
               "af": 8
@@ -2031,6 +3289,10 @@
               "signal": "INM"
             },
             {
+              "pin": "PA4",
+              "signal": "INM0"
+            },
+            {
               "pin": "PA6",
               "signal": "OUT",
               "af": 8
@@ -2038,6 +3300,10 @@
             {
               "pin": "PB1",
               "signal": "INP"
+            },
+            {
+              "pin": "PB1",
+              "signal": "INP1"
             },
             {
               "pin": "PB8",
@@ -2060,6 +3326,14 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA12",
@@ -2072,6 +3346,10 @@
             },
             {
               "pin": "PA2",
+              "signal": "INM1"
+            },
+            {
+              "pin": "PA2",
               "signal": "OUT",
               "af": 8
             },
@@ -2080,12 +3358,24 @@
               "signal": "INP"
             },
             {
+              "pin": "PA3",
+              "signal": "INP1"
+            },
+            {
               "pin": "PA5",
               "signal": "INM"
             },
             {
+              "pin": "PA5",
+              "signal": "INM0"
+            },
+            {
               "pin": "PA7",
               "signal": "INP"
+            },
+            {
+              "pin": "PA7",
+              "signal": "INP0"
             },
             {
               "pin": "PA7",
@@ -2113,10 +3403,22 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA0",
               "signal": "INP"
+            },
+            {
+              "pin": "PA0",
+              "signal": "INP0"
             },
             {
               "pin": "PB15",
@@ -2133,8 +3435,16 @@
               "signal": "INM"
             },
             {
+              "pin": "PC0",
+              "signal": "INM1"
+            },
+            {
               "pin": "PC1",
               "signal": "INP"
+            },
+            {
+              "pin": "PC1",
+              "signal": "INP1"
             },
             {
               "pin": "PC2",
@@ -2144,6 +3454,10 @@
             {
               "pin": "PF1",
               "signal": "INM"
+            },
+            {
+              "pin": "PF1",
+              "signal": "INM0"
             }
           ],
           "interrupts": [
@@ -2161,10 +3475,22 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PB0",
               "signal": "INP"
+            },
+            {
+              "pin": "PB0",
+              "signal": "INP0"
             },
             {
               "pin": "PB1",
@@ -2181,6 +3507,10 @@
               "signal": "INM"
             },
             {
+              "pin": "PB2",
+              "signal": "INM1"
+            },
+            {
               "pin": "PB6",
               "signal": "OUT",
               "af": 8
@@ -2190,8 +3520,16 @@
               "signal": "INP"
             },
             {
+              "pin": "PE7",
+              "signal": "INP1"
+            },
+            {
               "pin": "PE8",
               "signal": "INM"
+            },
+            {
+              "pin": "PE8",
+              "signal": "INM0"
             }
           ],
           "interrupts": [
@@ -2209,6 +3547,14 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA9",
@@ -2220,8 +3566,16 @@
               "signal": "INM"
             },
             {
+              "pin": "PB10",
+              "signal": "INM0"
+            },
+            {
               "pin": "PB13",
               "signal": "INP"
+            },
+            {
+              "pin": "PB13",
+              "signal": "INP0"
             },
             {
               "pin": "PC7",
@@ -2244,6 +3598,14 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA10",
@@ -2255,8 +3617,16 @@
               "signal": "INP"
             },
             {
+              "pin": "PB11",
+              "signal": "INP0"
+            },
+            {
               "pin": "PB15",
               "signal": "INM"
+            },
+            {
+              "pin": "PB15",
+              "signal": "INM1"
             },
             {
               "pin": "PC6",
@@ -2268,8 +3638,16 @@
               "signal": "INM"
             },
             {
+              "pin": "PD10",
+              "signal": "INM0"
+            },
+            {
               "pin": "PD11",
               "signal": "INP"
+            },
+            {
+              "pin": "PD11",
+              "signal": "INP1"
             }
           ],
           "interrupts": [
@@ -2287,6 +3665,14 @@
             "version": "v2",
             "block": "COMP"
           },
+          "rcc": {
+            "bus_clock": "PCLK2",
+            "kernel_clock": "PCLK2",
+            "enable": {
+              "register": "APB2ENR",
+              "field": "SYSCFGEN"
+            }
+          },
           "pins": [
             {
               "pin": "PA8",
@@ -2298,8 +3684,16 @@
               "signal": "INM"
             },
             {
+              "pin": "PB12",
+              "signal": "INM1"
+            },
+            {
               "pin": "PB14",
               "signal": "INP"
+            },
+            {
+              "pin": "PB14",
+              "signal": "INP0"
             },
             {
               "pin": "PC8",
@@ -2454,6 +3848,124 @@
               "dmamux": "DMAMUX1",
               "request": 7
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG15",
+              "source": "HRTIM_DAC_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "EXTI9_TRG"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_RESET_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_RESET_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "HRTIM_DAC_RESET_TRG3"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "HRTIM_DAC_RESET_TRG4"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "HRTIM_DAC_RESET_TRG5"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "HRTIM_DAC_RESET_TRG6"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG6",
+              "source": "EXTI10_TRG"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG9",
+              "source": "HRTIM_DAC_STEP_TRG1"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG10",
+              "source": "HRTIM_DAC_STEP_TRG2"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG11",
+              "source": "HRTIM_DAC_STEP_TRG3"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG12",
+              "source": "HRTIM_DAC_STEP_TRG4"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG13",
+              "source": "HRTIM_DAC_STEP_TRG5"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG14",
+              "source": "HRTIM_DAC_STEP_TRG6"
+            }
           ]
         },
         {
@@ -2494,6 +4006,124 @@
               "dmamux": "DMAMUX1",
               "request": 41
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG15",
+              "source": "HRTIM_DAC_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "EXTI9_TRG"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_RESET_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_RESET_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "HRTIM_DAC_RESET_TRG3"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "HRTIM_DAC_RESET_TRG4"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "HRTIM_DAC_RESET_TRG5"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "HRTIM_DAC_RESET_TRG6"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG6",
+              "source": "EXTI10_TRG"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG9",
+              "source": "HRTIM_DAC_STEP_TRG1"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG10",
+              "source": "HRTIM_DAC_STEP_TRG2"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG11",
+              "source": "HRTIM_DAC_STEP_TRG3"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG12",
+              "source": "HRTIM_DAC_STEP_TRG4"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG13",
+              "source": "HRTIM_DAC_STEP_TRG5"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG14",
+              "source": "HRTIM_DAC_STEP_TRG6"
+            }
           ]
         },
         {
@@ -2533,6 +4163,124 @@
               "dmamux": "DMAMUX1",
               "request": 103
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG15",
+              "source": "HRTIM_DAC_TRG3"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "EXTI9_TRG"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_RESET_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_RESET_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "HRTIM_DAC_RESET_TRG3"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "HRTIM_DAC_RESET_TRG4"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "HRTIM_DAC_RESET_TRG5"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "HRTIM_DAC_RESET_TRG6"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG6",
+              "source": "EXTI10_TRG"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG9",
+              "source": "HRTIM_DAC_STEP_TRG1"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG10",
+              "source": "HRTIM_DAC_STEP_TRG2"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG11",
+              "source": "HRTIM_DAC_STEP_TRG3"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG12",
+              "source": "HRTIM_DAC_STEP_TRG4"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG13",
+              "source": "HRTIM_DAC_STEP_TRG5"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG14",
+              "source": "HRTIM_DAC_STEP_TRG6"
+            }
           ]
         },
         {
@@ -2571,6 +4319,124 @@
               "signal": "CH2",
               "dmamux": "DMAMUX1",
               "request": 105
+            }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG15",
+              "source": "HRTIM_DAC_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "EXTI9_TRG"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_RESET_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_RESET_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "HRTIM_DAC_RESET_TRG3"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "HRTIM_DAC_RESET_TRG4"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "HRTIM_DAC_RESET_TRG5"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "HRTIM_DAC_RESET_TRG6"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG1",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG2",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG3",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG4",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG5",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG6",
+              "source": "EXTI10_TRG"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG7",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG8",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG9",
+              "source": "HRTIM_DAC_STEP_TRG1"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG10",
+              "source": "HRTIM_DAC_STEP_TRG2"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG11",
+              "source": "HRTIM_DAC_STEP_TRG3"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG12",
+              "source": "HRTIM_DAC_STEP_TRG4"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG13",
+              "source": "HRTIM_DAC_STEP_TRG5"
+            },
+            {
+              "signal": "DAC_INC_CHX_TRG14",
+              "source": "HRTIM_DAC_STEP_TRG6"
             }
           ]
         },
@@ -7267,6 +9133,15 @@
             "kind": "vrefbuf",
             "version": "v2b",
             "block": "VREFBUF"
+          }
+        },
+        {
+          "name": "VREFINTCAL",
+          "address": 536835498,
+          "registers": {
+            "kind": "vrefintcal",
+            "version": "v1",
+            "block": "VREFINTCAL"
           }
         },
         {

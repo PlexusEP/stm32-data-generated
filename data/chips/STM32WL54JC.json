@@ -978,6 +978,32 @@
               "dmamux": "DMAMUX1",
               "request": 6
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "LPTIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -1303,6 +1329,18 @@
               "field": "GPIOHRST"
             }
           }
+        },
+        {
+          "name": "GTZC",
+          "address": 1476412416
+        },
+        {
+          "name": "GTZC_TZIC",
+          "address": 1476413440
+        },
+        {
+          "name": "GTZC_TZSC",
+          "address": 1476412416
         },
         {
           "name": "HSEM",
@@ -2495,7 +2533,7 @@
           "address": 1073818624,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -2652,7 +2690,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -2729,7 +2767,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -2811,7 +2849,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -3141,6 +3179,15 @@
             "kind": "vrefbuf",
             "version": "v1",
             "block": "VREFBUF"
+          }
+        },
+        {
+          "name": "VREFINTCAL",
+          "address": 536835498,
+          "registers": {
+            "kind": "vrefintcal",
+            "version": "v1",
+            "block": "VREFINTCAL"
           }
         },
         {
@@ -3972,6 +4019,32 @@
               "dmamux": "DMAMUX1",
               "request": 6
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "LPTIM3_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG14",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -4276,6 +4349,32 @@
               "field": "GPIOHRST"
             }
           }
+        },
+        {
+          "name": "GTZC",
+          "address": 1476412416
+        },
+        {
+          "name": "GTZC_TZIC",
+          "address": 1476413440,
+          "interrupts": [
+            {
+              "signal": "GLOBAL",
+              "interrupt": "TZIC_ILA"
+            },
+            {
+              "signal": "GTZC",
+              "interrupt": "TZIC_ILA"
+            },
+            {
+              "signal": "ILA",
+              "interrupt": "TZIC_ILA"
+            }
+          ]
+        },
+        {
+          "name": "GTZC_TZSC",
+          "address": 1476412416
         },
         {
           "name": "HSEM",
@@ -5464,7 +5563,7 @@
           "address": 1073818624,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -5621,7 +5720,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -5698,7 +5797,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -5780,7 +5879,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -6110,6 +6209,15 @@
             "kind": "vrefbuf",
             "version": "v1",
             "block": "VREFBUF"
+          }
+        },
+        {
+          "name": "VREFINTCAL",
+          "address": 536835498,
+          "registers": {
+            "kind": "vrefintcal",
+            "version": "v1",
+            "block": "VREFINTCAL"
           }
         },
         {

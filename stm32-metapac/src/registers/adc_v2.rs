@@ -496,12 +496,12 @@ pub(crate) static REGISTERS: IR = IR {
                     enumm: Some("SampleTime"),
                 },
                 Field {
-                    name: "smpx_x",
+                    name: "sm_px_x",
                     description: Some("Sample time bits"),
                     bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
                     bit_size: 32,
                     array: None,
-                    enumm: Some("SmprSmpxX"),
+                    enumm: Some("SmprSmPxX"),
                 },
             ],
         },
@@ -520,12 +520,12 @@ pub(crate) static REGISTERS: IR = IR {
                     enumm: Some("SampleTime"),
                 },
                 Field {
-                    name: "smpx_x",
+                    name: "sm_px_x",
                     description: Some("Sample time bits"),
                     bit_offset: BitOffset::Regular(RegularBitOffset { offset: 0 }),
                     bit_size: 32,
                     array: None,
-                    enumm: Some("SmprSmpxX"),
+                    enumm: Some("SmprSmPxX"),
                 },
             ],
         },
@@ -645,14 +645,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "RIGHT",
-                    description: Some("Right alignment"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "LEFT",
+                    name: "Left",
                     description: Some("Left alignment"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Right",
+                    description: Some("Right alignment"),
+                    value: 0,
                 },
             ],
         },
@@ -662,12 +662,12 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "ALL_CHANNELS",
+                    name: "AllChannels",
                     description: Some("Analog watchdog enabled on all channels"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "SINGLE_CHANNEL",
+                    name: "SingleChannel",
                     description: Some("Analog watchdog enabled on a single channel"),
                     value: 1,
                 },
@@ -679,14 +679,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "SINGLE",
-                    description: Some("No new DMA request is issued after the last transfer"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "CONTINUOUS",
+                    name: "Continuous",
                     description: Some("DMA requests are issued as long as data are converted and DMA=1"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "Single",
+                    description: Some("No new DMA request is issued after the last transfer"),
+                    value: 0,
                 },
             ],
         },
@@ -696,14 +696,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "EACH_SEQUENCE",
-                    description: Some("The EOC bit is set at the end of each sequence of regular conversions"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "EACH_CONVERSION",
+                    name: "EachConversion",
                     description: Some("The EOC bit is set at the end of each regular conversion"),
                     value: 1,
+                },
+                EnumVariant {
+                    name: "EachSequence",
+                    description: Some("The EOC bit is set at the end of each sequence of regular conversions"),
+                    value: 0,
                 },
             ],
         },
@@ -713,24 +713,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "DISABLED",
+                    name: "BothEdges",
+                    description: Some("Trigger detection on both the rising and falling edges"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Disabled",
                     description: Some("Trigger detection disabled"),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "RISING_EDGE",
-                    description: Some("Trigger detection on the rising edge"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "FALLING_EDGE",
+                    name: "FallingEdge",
                     description: Some("Trigger detection on the falling edge"),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "BOTH_EDGES",
-                    description: Some("Trigger detection on both the rising and falling edges"),
-                    value: 3,
+                    name: "RisingEdge",
+                    description: Some("Trigger detection on the rising edge"),
+                    value: 1,
                 },
             ],
         },
@@ -740,24 +740,24 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "BITS12",
-                    description: Some("12-bit (15 ADCCLK cycles)"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "BITS10",
+                    name: "Bits10",
                     description: Some("10-bit (13 ADCCLK cycles)"),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "BITS8",
-                    description: Some("8-bit (11 ADCCLK cycles)"),
-                    value: 2,
+                    name: "Bits12",
+                    description: Some("12-bit (15 ADCCLK cycles)"),
+                    value: 0,
                 },
                 EnumVariant {
-                    name: "BITS6",
+                    name: "Bits6",
                     description: Some("6-bit (9 ADCCLK cycles)"),
                     value: 3,
+                },
+                EnumVariant {
+                    name: "Bits8",
+                    description: Some("8-bit (11 ADCCLK cycles)"),
+                    value: 2,
                 },
             ],
         },
@@ -767,91 +767,91 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "CYCLES3",
-                    description: Some("3 cycles"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "CYCLES15",
-                    description: Some("15 cycles"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "CYCLES28",
-                    description: Some("28 cycles"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "CYCLES56",
-                    description: Some("56 cycles"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "CYCLES84",
-                    description: Some("84 cycles"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "CYCLES112",
+                    name: "Cycles112",
                     description: Some("112 cycles"),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "CYCLES144",
+                    name: "Cycles144",
                     description: Some("144 cycles"),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "CYCLES480",
+                    name: "Cycles15",
+                    description: Some("15 cycles"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Cycles28",
+                    description: Some("28 cycles"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Cycles3",
+                    description: Some("3 cycles"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Cycles480",
                     description: Some("480 cycles"),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Cycles56",
+                    description: Some("56 cycles"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Cycles84",
+                    description: Some("84 cycles"),
+                    value: 4,
                 },
             ],
         },
         Enum {
-            name: "SmprSmpxX",
+            name: "SmprSmPxX",
             description: None,
             bit_size: 32,
             variants: &[
                 EnumVariant {
-                    name: "CYCLES3",
-                    description: Some("3 cycles"),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "CYCLES15",
-                    description: Some("15 cycles"),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "CYCLES28",
-                    description: Some("28 cycles"),
-                    value: 2,
-                },
-                EnumVariant {
-                    name: "CYCLES56",
-                    description: Some("56 cycles"),
-                    value: 3,
-                },
-                EnumVariant {
-                    name: "CYCLES84",
-                    description: Some("84 cycles"),
-                    value: 4,
-                },
-                EnumVariant {
-                    name: "CYCLES112",
+                    name: "Cycles112",
                     description: Some("112 cycles"),
                     value: 5,
                 },
                 EnumVariant {
-                    name: "CYCLES144",
+                    name: "Cycles144",
                     description: Some("144 cycles"),
                     value: 6,
                 },
                 EnumVariant {
-                    name: "CYCLES480",
+                    name: "Cycles15",
+                    description: Some("15 cycles"),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "Cycles28",
+                    description: Some("28 cycles"),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Cycles3",
+                    description: Some("3 cycles"),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "Cycles480",
                     description: Some("480 cycles"),
                     value: 7,
+                },
+                EnumVariant {
+                    name: "Cycles56",
+                    description: Some("56 cycles"),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "Cycles84",
+                    description: Some("84 cycles"),
+                    value: 4,
                 },
             ],
         },

@@ -699,39 +699,39 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "ECB",
-                    description: Some(
-                        "Electronic codebook",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "CBC",
+                    name: "Cbc",
                     description: Some(
                         "Cipher-block chaining",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "CTR",
+                    name: "Ccm",
+                    description: Some(
+                        "Counter with CBC-MAC",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "Ctr",
                     description: Some(
                         "Counter mode",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "GCM_GMAC",
+                    name: "Ecb",
+                    description: Some(
+                        "Electronic codebook",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "GcmGmac",
                     description: Some(
                         "Galois counter mode and Galois message authentication code",
                     ),
                     value: 3,
-                },
-                EnumVariant {
-                    name: "CCM",
-                    description: Some(
-                        "Counter with CBC-MAC",
-                    ),
-                    value: 4,
                 },
             ],
         },
@@ -741,32 +741,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "NONE",
+                    name: "Bit",
                     description: Some(
-                        "No swapping (32-bit data).",
+                        "Bit-level swapping",
                     ),
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "HALF_WORD",
-                    description: Some(
-                        "Half-word swapping (16-bit data)",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "BYTE",
+                    name: "Byte",
                     description: Some(
                         "Byte swapping (8-bit data)",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "BIT",
+                    name: "HalfWord",
                     description: Some(
-                        "Bit-level swapping",
+                        "Half-word swapping (16-bit data)",
                     ),
-                    value: 3,
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "None",
+                    description: Some(
+                        "No swapping (32-bit data).",
+                    ),
+                    value: 0,
                 },
             ],
         },
@@ -776,32 +776,32 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "INIT_PHASE",
+                    name: "FinalPhase",
                     description: Some(
-                        "Initialization phase",
+                        "Final phase",
                     ),
-                    value: 0,
+                    value: 3,
                 },
                 EnumVariant {
-                    name: "HEADER_PHASE",
+                    name: "HeaderPhase",
                     description: Some(
                         "Header phase",
                     ),
                     value: 1,
                 },
                 EnumVariant {
-                    name: "PAYLOAD_PHASE",
+                    name: "InitPhase",
+                    description: Some(
+                        "Initialization phase",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "PayloadPhase",
                     description: Some(
                         "Payload phase",
                     ),
                     value: 2,
-                },
-                EnumVariant {
-                    name: "FINAL_PHASE",
-                    description: Some(
-                        "Final phase",
-                    ),
-                    value: 3,
                 },
             ],
         },
@@ -811,28 +811,28 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 3,
             variants: &[
                 EnumVariant {
-                    name: "SOFTWARE_KEY",
-                    description: Some(
-                        "Software key, loaded in key registers SAES_KEYx",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "DHUK",
-                    description: Some(
-                        "Derived hardware unique key",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "BHK",
+                    name: "Bhk",
                     description: Some(
                         "Boot hardware key",
                     ),
                     value: 2,
                 },
                 EnumVariant {
-                    name: "XOR_DHUK_BHK",
+                    name: "Dhuk",
+                    description: Some(
+                        "Derived hardware unique key",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "SoftwareKey",
+                    description: Some(
+                        "Software key, loaded in key registers SAES_KEYx",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "XorDhukBhk",
                     description: Some(
                         "XOR of DHUK and BHK",
                     ),
@@ -846,14 +846,14 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 1,
             variants: &[
                 EnumVariant {
-                    name: "BITS128",
+                    name: "Bits128",
                     description: Some(
                         "128-bit",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "BITS256",
+                    name: "Bits256",
                     description: Some(
                         "256-bit",
                     ),
@@ -867,25 +867,25 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "NORMAL",
+                    name: "Normal",
                     description: Some(
                         "AES peripheral",
                     ),
                     value: 0,
                 },
                 EnumVariant {
-                    name: "WRAPPED_KEY",
-                    description: Some(
-                        "Wrapped key for SAES mode. Key loaded in key registers can only be used to encrypt or\ndecrypt AES keys. Hence, when a decryption is selected, read-as-zero SAES_DOUTR register is\nautomatically loaded into SAES key registers after a successful decryption process.",
-                    ),
-                    value: 1,
-                },
-                EnumVariant {
-                    name: "SHARED_KEY",
+                    name: "SharedKey",
                     description: Some(
                         "Shared key mode. After a successful decryption process (unwrapping), SAES key registers are\nshared with the peripheral described in KSHAREID[1:0] bitfield. This sharing is valid only while\nKMOD[1:0] at 0x2 and KEYVALID=1. When a decryption is selected, read-as-zero SAES_DOUTR\nregister is automatically loaded into SAES key registers after a successful decryption process.",
                     ),
                     value: 2,
+                },
+                EnumVariant {
+                    name: "WrappedKey",
+                    description: Some(
+                        "Wrapped key for SAES mode. Key loaded in key registers can only be used to encrypt or\ndecrypt AES keys. Hence, when a decryption is selected, read-as-zero SAES_DOUTR register is\nautomatically loaded into SAES key registers after a successful decryption process.",
+                    ),
+                    value: 1,
                 },
             ],
         },
@@ -895,7 +895,7 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "AES",
+                    name: "Aes",
                     description: Some(
                         "AES peripheral",
                     ),
@@ -909,21 +909,21 @@ pub(crate) static REGISTERS: IR = IR {
             bit_size: 2,
             variants: &[
                 EnumVariant {
-                    name: "ENCRYPTION",
+                    name: "Decryption",
+                    description: None,
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "Encryption",
                     description: None,
                     value: 0,
                 },
                 EnumVariant {
-                    name: "KEY_DERIVATION",
+                    name: "KeyDerivation",
                     description: Some(
                         "Key derivation (or key preparation), for ECB/CBC decryption only",
                     ),
                     value: 1,
-                },
-                EnumVariant {
-                    name: "DECRYPTION",
-                    description: None,
-                    value: 2,
                 },
             ],
         },
