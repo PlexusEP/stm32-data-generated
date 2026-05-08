@@ -3,7 +3,12 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "ADC1",
         address: 0x41006000,
-        registers: None,
+        registers: Some(PeripheralRegisters {
+            kind: "adc",
+            version: "wb0",
+            block: "ADC",
+            ir: &adc::REGISTERS,
+        }),
         rcc: None,
         pins: &[
             PeripheralPin {
@@ -85,6 +90,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(5),
         }],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC",
@@ -96,7 +102,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x48200000,
         registers: Some(PeripheralRegisters {
             kind: "crc",
-            version: "v2",
+            version: "v3",
             block: "CRC",
             ir: &crc::REGISTERS,
         }),
@@ -115,6 +121,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -142,6 +149,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "CH0",
@@ -190,7 +198,27 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "FLASH",
+        address: 0x40001000,
+        registers: Some(PeripheralRegisters {
+            kind: "flash",
+            version: "wb0",
+            block: "FLASH",
+            ir: &flash::REGISTERS,
+        }),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
+        interrupts: &[PeripheralInterrupt {
+            signal: "GLOBAL",
+            interrupt: "FLASH",
+        }],
         afio: None,
     },
     Peripheral {
@@ -198,7 +226,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x48000000,
         registers: Some(PeripheralRegisters {
             kind: "gpio",
-            version: "v1",
+            version: "v2",
             block: "GPIO",
             ir: &gpio::REGISTERS,
         }),
@@ -217,6 +245,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -225,7 +254,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x48100000,
         registers: Some(PeripheralRegisters {
             kind: "gpio",
-            version: "v1",
+            version: "v2",
             block: "GPIO",
             ir: &gpio::REGISTERS,
         }),
@@ -244,6 +273,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -304,6 +334,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(11),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -361,6 +392,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -385,6 +417,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -465,6 +498,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(17),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "LPUART1",
@@ -495,6 +529,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "PKA",
@@ -506,7 +541,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x48500000,
         registers: Some(PeripheralRegisters {
             kind: "pwr",
-            version: "wb",
+            version: "wb0",
             block: "PWR",
             ir: &pwr::REGISTERS,
         }),
@@ -619,6 +654,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "PVD",
             interrupt: "PVD",
@@ -628,7 +664,12 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
     Peripheral {
         name: "RADIO",
         address: 0x60000000,
-        registers: None,
+        registers: Some(PeripheralRegisters {
+            kind: "radio",
+            version: "v1",
+            block: "RADIO",
+            ir: &radio::REGISTERS,
+        }),
         rcc: None,
         pins: &[
             PeripheralPin {
@@ -653,6 +694,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "SEQ",
@@ -708,6 +750,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "RCC",
@@ -738,6 +781,23 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "RRM",
+        address: 0x60001400,
+        registers: Some(PeripheralRegisters {
+            kind: "rrm",
+            version: "v1",
+            block: "RRM",
+            ir: &rrm::REGISTERS,
+        }),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -781,6 +841,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ALARM",
@@ -887,6 +948,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(7),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI1",
@@ -980,6 +1042,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(9),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI2",
@@ -1056,6 +1119,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI3",
@@ -1067,7 +1131,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x40000000,
         registers: Some(PeripheralRegisters {
             kind: "syscfg",
-            version: "wb",
+            version: "wb0",
             block: "SYSCFG",
             ir: &syscfg::REGISTERS,
         }),
@@ -1086,6 +1150,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1094,7 +1159,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         address: 0x40002000,
         registers: Some(PeripheralRegisters {
             kind: "timer",
-            version: "v1",
+            version: "v3",
             block: "TIM_ADV",
             ir: &timer::REGISTERS,
         }),
@@ -1251,6 +1316,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(27),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -1379,6 +1445,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(15),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "USART1",
@@ -1547,13 +1614,17 @@ pub(crate) static PINS: &[Pin] = &[
     Pin { name: "PB14" },
     Pin { name: "PB15" },
 ];
+#[path = "../registers/adc_wb0.rs"]
+pub mod adc;
 #[path = "../registers/bdma_v1.rs"]
 pub mod bdma;
-#[path = "../registers/crc_v2.rs"]
+#[path = "../registers/crc_v3.rs"]
 pub mod crc;
 #[path = "../registers/dmamux_v1.rs"]
 pub mod dmamux;
-#[path = "../registers/gpio_v1.rs"]
+#[path = "../registers/flash_wb0.rs"]
+pub mod flash;
+#[path = "../registers/gpio_v2.rs"]
 pub mod gpio;
 #[path = "../registers/i2c_v1.rs"]
 pub mod i2c;
@@ -1561,19 +1632,23 @@ pub mod i2c;
 pub mod iwdg;
 #[path = "../registers/pka_v1c.rs"]
 pub mod pka;
-#[path = "../registers/pwr_wb.rs"]
+#[path = "../registers/pwr_wb0.rs"]
 pub mod pwr;
+#[path = "../registers/radio_v1.rs"]
+pub mod radio;
 #[path = "../registers/rcc_wb0.rs"]
 pub mod rcc;
 #[path = "../registers/rng_v1.rs"]
 pub mod rng;
+#[path = "../registers/rrm_v1.rs"]
+pub mod rrm;
 #[path = "../registers/rtc_v3_base.rs"]
 pub mod rtc;
 #[path = "../registers/spi_v3.rs"]
 pub mod spi;
-#[path = "../registers/syscfg_wb.rs"]
+#[path = "../registers/syscfg_wb0.rs"]
 pub mod syscfg;
-#[path = "../registers/timer_v1.rs"]
+#[path = "../registers/timer_v3.rs"]
 pub mod timer;
 #[path = "../registers/usart_v4.rs"]
 pub mod usart;

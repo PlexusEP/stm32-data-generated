@@ -818,13 +818,13 @@ pub mod ltdc;
 pub mod mdios;
 #[path = "../../peripherals/otg_v1.rs"]
 pub mod otg;
-#[path = "../../peripherals/pssi_v1.rs"]
+#[path = "../../peripherals/pssi_v1_h7rs.rs"]
 pub mod pssi;
 #[path = "../../peripherals/pwr_h7rs.rs"]
 pub mod pwr;
 #[path = "../../peripherals/rcc_h7rs.rs"]
 pub mod rcc;
-#[path = "../../peripherals/rng_v1.rs"]
+#[path = "../../peripherals/rng_v3.rs"]
 pub mod rng;
 #[path = "../../peripherals/rtc_v3_h7rs.rs"]
 pub mod rtc;
@@ -838,7 +838,7 @@ pub mod spdifrx;
 pub mod spi;
 #[path = "../../peripherals/syscfg_h7rs.rs"]
 pub mod syscfg;
-#[path = "../../peripherals/timer_v1.rs"]
+#[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;

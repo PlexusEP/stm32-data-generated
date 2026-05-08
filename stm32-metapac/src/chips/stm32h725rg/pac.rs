@@ -794,7 +794,7 @@ pub mod pssi;
 pub mod pwr;
 #[path = "../../peripherals/rcc_h7.rs"]
 pub mod rcc;
-#[path = "../../peripherals/rng_v1.rs"]
+#[path = "../../peripherals/rng_v2.rs"]
 pub mod rng;
 #[path = "../../peripherals/rtc_v2_h7.rs"]
 pub mod rtc;
@@ -808,7 +808,7 @@ pub mod spdifrx;
 pub mod spi;
 #[path = "../../peripherals/syscfg_h7.rs"]
 pub mod syscfg;
-#[path = "../../peripherals/timer_v1.rs"]
+#[path = "../../peripherals/timer_v3.rs"]
 pub mod timer;
 #[path = "../../peripherals/uid_v1.rs"]
 pub mod uid;
