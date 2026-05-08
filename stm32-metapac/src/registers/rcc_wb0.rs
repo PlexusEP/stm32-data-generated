@@ -1341,9 +1341,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Lsirdyie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "lserdyie",
@@ -1357,9 +1355,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Lserdyie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "hsirdyie",
@@ -1373,9 +1369,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Hsirdyie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "hserdyie",
@@ -1389,9 +1383,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Hserdyie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "hsipllrdyie",
@@ -1405,9 +1397,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Hsipllrdyie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "hsipllunlockdetie",
@@ -1421,9 +1411,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Hsipllunlockdetie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "rtcrstie",
@@ -1437,9 +1425,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Rtcrstie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "wdgrstie",
@@ -1453,9 +1439,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Wdgrstie",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "lpurstie",
@@ -1469,9 +1453,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "Lpurstie",
-                    ),
+                    enumm: None,
                 },
             ],
         },
@@ -1897,9 +1879,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "EofseqIe",
-                    ),
+                    enumm: None,
                 },
                 Field {
                     name: "eofseq_irq",
@@ -1913,9 +1893,7 @@ pub(crate) static REGISTERS: IR = IR {
                     ),
                     bit_size: 1,
                     array: None,
-                    enumm: Some(
-                        "EofseqIrq",
-                    ),
+                    enumm: None,
                 },
             ],
         },
@@ -2276,48 +2254,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "EofseqIe",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "End of sequence interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "End of sequence interrupt enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
-            name: "EofseqIrq",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "No end of sequence event occured.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "End of sequece event occured.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Fmrat",
             description: None,
             bit_size: 1,
@@ -2416,27 +2352,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "Hserdyie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "HSE ready interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "HSE ready interrupt enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Hserdyif",
             description: None,
             bit_size: 1,
@@ -2521,27 +2436,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "Hsipllrdyie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "HSI PLL ready interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "HSI PLL ready interrupt enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Hsipllrdyif",
             description: None,
             bit_size: 1,
@@ -2563,27 +2457,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "Hsipllunlockdetie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "HSI PLL unlock detection interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "HSI PLL unlock detection interrupt enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Hsirdy",
             description: None,
             bit_size: 1,
@@ -2599,27 +2472,6 @@ pub(crate) static REGISTERS: IR = IR {
                     name: "B_0X1",
                     description: Some(
                         "internal RC 64 MHz oscillator ready.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
-            name: "Hsirdyie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "HSI ready interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "HSI ready interrupt enabled.",
                     ),
                     value: 1,
                 },
@@ -2745,27 +2597,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "Lpurstie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "LPUART reset release interrupt is disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "LPUART reset release interrupt is enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Lsebyp",
             description: None,
             bit_size: 1,
@@ -2808,27 +2639,6 @@ pub(crate) static REGISTERS: IR = IR {
             ],
         },
         Enum {
-            name: "Lserdyie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "LSE ready interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "LSE ready interrupt enabled.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
             name: "Lserdyif",
             description: None,
             bit_size: 1,
@@ -2865,27 +2675,6 @@ pub(crate) static REGISTERS: IR = IR {
                     name: "B_0X1",
                     description: Some(
                         "LSI RC oscillator ready.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
-            name: "Lsirdyie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "LSI ready interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "LSI ready interrupt enabled.",
                     ),
                     value: 1,
                 },
@@ -3054,27 +2843,6 @@ pub(crate) static REGISTERS: IR = IR {
                     name: "B_0X1",
                     description: Some(
                         "Reset the value of the reset flags.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
-            name: "Rtcrstie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "HSI PLL unlock detection interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "HSI PLL unlock detection interrupt enabled.",
                     ),
                     value: 1,
                 },
@@ -3250,27 +3018,6 @@ pub(crate) static REGISTERS: IR = IR {
                     name: "B_0X1",
                     description: Some(
                         "Watchdog reset occurred.",
-                    ),
-                    value: 1,
-                },
-            ],
-        },
-        Enum {
-            name: "Wdgrstie",
-            description: None,
-            bit_size: 1,
-            variants: &[
-                EnumVariant {
-                    name: "B_0X0",
-                    description: Some(
-                        "interrupt disabled.",
-                    ),
-                    value: 0,
-                },
-                EnumVariant {
-                    name: "B_0X1",
-                    description: Some(
-                        "interrupt enabled.",
                     ),
                     value: 1,
                 },
