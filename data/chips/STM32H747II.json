@@ -2099,6 +2099,60 @@
               "dmamux": "DMAMUX1",
               "request": 68
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM5_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -5268,7 +5322,7 @@
               "interrupt": "LTDC_ER"
             },
             {
-              "signal": "GLOBAL",
+              "signal": "LO",
               "interrupt": "LTDC"
             }
           ],
@@ -7482,7 +7536,7 @@
           "address": 1073807360,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -7739,7 +7793,7 @@
           "address": 1073747968,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH"
           },
           "rcc": {
@@ -7794,7 +7848,7 @@
           "address": 1073748992,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -7849,7 +7903,7 @@
           "address": 1073750016,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -7904,7 +7958,7 @@
           "address": 1073823744,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH_CMP"
           },
           "rcc": {
@@ -8011,7 +8065,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -8098,7 +8152,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -8185,7 +8239,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -8317,7 +8371,7 @@
           "address": 1073742848,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -8449,7 +8503,7 @@
           "address": 1073743872,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -8561,7 +8615,7 @@
           "address": 1073744896,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -8663,7 +8717,7 @@
           "address": 1073745920,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -8713,7 +8767,7 @@
           "address": 1073746944,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -8763,7 +8817,7 @@
           "address": 1073808384,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -11937,6 +11991,60 @@
               "dmamux": "DMAMUX1",
               "request": 68
             }
+          ],
+          "triggers": [
+            {
+              "signal": "DAC_CHX_TRG1",
+              "source": "TIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG2",
+              "source": "TIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG3",
+              "source": "TIM4_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG4",
+              "source": "TIM5_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG5",
+              "source": "TIM6_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG6",
+              "source": "TIM7_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG7",
+              "source": "TIM8_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG8",
+              "source": "TIM15_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG9",
+              "source": "HRTIM_DAC_TRG1"
+            },
+            {
+              "signal": "DAC_CHX_TRG10",
+              "source": "HRTIM_DAC_TRG2"
+            },
+            {
+              "signal": "DAC_CHX_TRG11",
+              "source": "LPTIM1_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG12",
+              "source": "LPTIM2_TRGO"
+            },
+            {
+              "signal": "DAC_CHX_TRG13",
+              "source": "EXTI9_TRG"
+            }
           ]
         },
         {
@@ -15106,7 +15214,7 @@
               "interrupt": "LTDC_ER"
             },
             {
-              "signal": "GLOBAL",
+              "signal": "LO",
               "interrupt": "LTDC"
             }
           ],
@@ -17320,7 +17428,7 @@
           "address": 1073807360,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -17577,7 +17685,7 @@
           "address": 1073747968,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH"
           },
           "rcc": {
@@ -17632,7 +17740,7 @@
           "address": 1073748992,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -17687,7 +17795,7 @@
           "address": 1073750016,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -17742,7 +17850,7 @@
           "address": 1073823744,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_2CH_CMP"
           },
           "rcc": {
@@ -17849,7 +17957,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -17936,7 +18044,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -18023,7 +18131,7 @@
           "address": 1073741824,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -18155,7 +18263,7 @@
           "address": 1073742848,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -18287,7 +18395,7 @@
           "address": 1073743872,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
@@ -18399,7 +18507,7 @@
           "address": 1073744896,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP32"
           },
           "rcc": {
@@ -18501,7 +18609,7 @@
           "address": 1073745920,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -18551,7 +18659,7 @@
           "address": 1073746944,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_BASIC"
           },
           "rcc": {
@@ -18601,7 +18709,7 @@
           "address": 1073808384,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {

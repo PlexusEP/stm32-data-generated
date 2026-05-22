@@ -165,6 +165,252 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(5),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG0",
+                source: "TIM1_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG1",
+                source: "TIM1_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG2",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG3",
+                source: "TIM2_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG4",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG5",
+                source: "TIM4_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG6",
+                source: "EXTI11_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG7",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG8",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG9",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG10",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG11",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG12",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG13",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG14",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG15",
+                source: "TIM3_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG18",
+                source: "TIM20_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG19",
+                source: "TIM20_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG20",
+                source: "TIM20_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG21",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG22",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG23",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG24",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG25",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG26",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG27",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG28",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG0",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG1",
+                source: "TIM1_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG2",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG3",
+                source: "TIM2_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG4",
+                source: "TIM3_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG6",
+                source: "EXTI15_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG7",
+                source: "TIM8_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG8",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG9",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG10",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG11",
+                source: "TIM3_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG12",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG13",
+                source: "TIM3_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG14",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG15",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG18",
+                source: "TIM20_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG21",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG22",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG23",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG24",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG25",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG26",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG27",
+                source: "TIM16_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC1_2",
@@ -183,6 +429,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -366,6 +613,252 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(36),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG0",
+                source: "TIM1_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG1",
+                source: "TIM1_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG2",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG3",
+                source: "TIM2_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG4",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG5",
+                source: "TIM4_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG6",
+                source: "EXTI11_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG7",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG8",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG9",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG10",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG11",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG12",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG13",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG14",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG15",
+                source: "TIM3_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG18",
+                source: "TIM20_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG19",
+                source: "TIM20_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG20",
+                source: "TIM20_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG21",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG22",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG23",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG24",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG25",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG26",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG27",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG28",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG0",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG1",
+                source: "TIM1_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG2",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG3",
+                source: "TIM2_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG4",
+                source: "TIM3_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG6",
+                source: "EXTI15_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG7",
+                source: "TIM8_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG8",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG9",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG10",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG11",
+                source: "TIM3_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG12",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG13",
+                source: "TIM3_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG14",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG15",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG18",
+                source: "TIM20_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG21",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG22",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG23",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG24",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG25",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG26",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG27",
+                source: "TIM16_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC1_2",
@@ -432,6 +925,256 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(37),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG0",
+                source: "TIM3_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG1",
+                source: "TIM2_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG2",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG3",
+                source: "TIM8_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG4",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG5",
+                source: "EXTI2_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG6",
+                source: "TIM4_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG7",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG8",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG9",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG10",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG11",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG12",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG13",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG14",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG15",
+                source: "TIM2_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG18",
+                source: "TIM20_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG21",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG22",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG23",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG24",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG25",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG26",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG27",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG28",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG0",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG1",
+                source: "TIM1_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG2",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG3",
+                source: "TIM8_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG4",
+                source: "TIM4_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG6",
+                source: "TIM4_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG7",
+                source: "TIM8_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG8",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG9",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG10",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG11",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG12",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG13",
+                source: "EXTI3_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG14",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG15",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG18",
+                source: "TIM20_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG21",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG22",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG23",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG24",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG25",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG26",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG27",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG28",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC3",
@@ -450,6 +1193,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -518,6 +1262,256 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(38),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG0",
+                source: "TIM3_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG1",
+                source: "TIM2_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG2",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG3",
+                source: "TIM8_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG4",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG5",
+                source: "EXTI2_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG6",
+                source: "TIM4_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG7",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG8",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG9",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG10",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG11",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG12",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG13",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG14",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG15",
+                source: "TIM2_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG18",
+                source: "TIM20_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG21",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG22",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG23",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG24",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG25",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG26",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG27",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG28",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG0",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG1",
+                source: "TIM1_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG2",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG3",
+                source: "TIM8_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG4",
+                source: "TIM4_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG6",
+                source: "TIM4_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG7",
+                source: "TIM8_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG8",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG9",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG10",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG11",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG12",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG13",
+                source: "EXTI3_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG14",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG15",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG18",
+                source: "TIM20_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG21",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG22",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG23",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG24",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG25",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG26",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG27",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG28",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC4",
@@ -574,6 +1568,256 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(39),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG0",
+                source: "TIM3_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG1",
+                source: "TIM2_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG2",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG3",
+                source: "TIM8_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG4",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG5",
+                source: "EXTI2_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG6",
+                source: "TIM4_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG7",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG8",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG9",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG10",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG11",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG12",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG13",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG14",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG15",
+                source: "TIM2_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG18",
+                source: "TIM20_CC1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG21",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG22",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG23",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG24",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG25",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG26",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG27",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG28",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_EXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG0",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG1",
+                source: "TIM1_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG2",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG3",
+                source: "TIM8_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG4",
+                source: "TIM4_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG6",
+                source: "TIM4_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG7",
+                source: "TIM8_CC4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG8",
+                source: "TIM1_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG9",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG10",
+                source: "TIM8_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG11",
+                source: "TIM1_CC3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG12",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG13",
+                source: "EXTI3_TRG",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG14",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG15",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG16",
+                source: "TIM20_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG17",
+                source: "TIM20_TRGO2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG18",
+                source: "TIM20_CC2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG19",
+                source: "HRTIM_ADC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG20",
+                source: "HRTIM_ADC_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG21",
+                source: "HRTIM_ADC_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG22",
+                source: "HRTIM_ADC_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG23",
+                source: "HRTIM_ADC_TRG7",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG24",
+                source: "HRTIM_ADC_TRG8",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG25",
+                source: "HRTIM_ADC_TRG9",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG26",
+                source: "HRTIM_ADC_TRG10",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG27",
+                source: "HRTIM_ADC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG28",
+                source: "HRTIM_ADC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG29",
+                source: "LPTIMOUT",
+            },
+            PeripheralTrigger {
+                signal: "ADC_JEXT_TRG30",
+                source: "TIM7_TRGO",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "ADC5",
@@ -621,6 +1865,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(92),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "AES",
@@ -636,11 +1881,25 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA0",
                 signal: "INM",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PA0",
+                signal: "INM1",
                 af: None,
             },
             PeripheralPin {
@@ -654,6 +1913,11 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PA1",
+                signal: "INP0",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PA11",
                 signal: "OUT",
                 af: Some(8),
@@ -661,6 +1925,11 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             PeripheralPin {
                 pin: "PA4",
                 signal: "INM",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PA4",
+                signal: "INM0",
                 af: None,
             },
             PeripheralPin {
@@ -674,12 +1943,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PB1",
+                signal: "INP1",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PB8",
                 signal: "OUT",
                 af: Some(8),
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP1_2_3",
@@ -695,7 +1970,16 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA12",
@@ -709,6 +1993,11 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
             PeripheralPin {
                 pin: "PA2",
+                signal: "INM1",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PA2",
                 signal: "OUT",
                 af: Some(8),
             },
@@ -718,13 +2007,28 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PA3",
+                signal: "INP1",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PA5",
                 signal: "INM",
                 af: None,
             },
             PeripheralPin {
+                pin: "PA5",
+                signal: "INM0",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PA7",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PA7",
+                signal: "INP0",
                 af: None,
             },
             PeripheralPin {
@@ -739,6 +2043,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP1_2_3",
@@ -754,11 +2059,25 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA0",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PA0",
+                signal: "INP0",
                 af: None,
             },
             PeripheralPin {
@@ -777,8 +2096,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PC0",
+                signal: "INM1",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PC1",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PC1",
+                signal: "INP1",
                 af: None,
             },
             PeripheralPin {
@@ -791,8 +2120,14 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 signal: "INM",
                 af: None,
             },
+            PeripheralPin {
+                pin: "PF1",
+                signal: "INM0",
+                af: None,
+            },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP1_2_3",
@@ -808,11 +2143,25 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PB0",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PB0",
+                signal: "INP0",
                 af: None,
             },
             PeripheralPin {
@@ -831,12 +2180,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PB2",
+                signal: "INM1",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PB6",
                 signal: "OUT",
                 af: Some(8),
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP4_5_6",
@@ -852,7 +2207,16 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA9",
@@ -865,8 +2229,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PB10",
+                signal: "INM0",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PB13",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PB13",
+                signal: "INP0",
                 af: None,
             },
             PeripheralPin {
@@ -876,6 +2250,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP4_5_6",
@@ -891,7 +2266,16 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA10",
@@ -904,8 +2288,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PB11",
+                signal: "INP0",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PB15",
                 signal: "INM",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PB15",
+                signal: "INM1",
                 af: None,
             },
             PeripheralPin {
@@ -915,6 +2309,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP4_5_6",
@@ -930,7 +2325,16 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             block: "COMP",
             ir: &comp::REGISTERS,
         }),
-        rcc: None,
+        rcc: Some(PeripheralRcc {
+            bus_clock: "PCLK2",
+            kernel_clock: Clock("PCLK2"),
+            enable: Some(PeripheralRccRegister {
+                register: "APB2ENR",
+                field: "SYSCFGEN",
+            }),
+            reset: None,
+            stop_mode: StopMode::Stop1,
+        }),
         pins: &[
             PeripheralPin {
                 pin: "PA8",
@@ -943,8 +2347,18 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 af: None,
             },
             PeripheralPin {
+                pin: "PB12",
+                signal: "INM1",
+                af: None,
+            },
+            PeripheralPin {
                 pin: "PB14",
                 signal: "INP",
+                af: None,
+            },
+            PeripheralPin {
+                pin: "PB14",
+                signal: "INP0",
                 af: None,
             },
             PeripheralPin {
@@ -954,6 +2368,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "WKUP",
             interrupt: "COMP7",
@@ -1001,6 +2416,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(113),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "CORDIC",
@@ -1031,6 +2447,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1069,6 +2486,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1124,6 +2542,124 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(7),
             },
         ],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG15",
+                source: "HRTIM_DAC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG6",
+                source: "EXTI9_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG9",
+                source: "HRTIM_DAC_RESET_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG10",
+                source: "HRTIM_DAC_RESET_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG11",
+                source: "HRTIM_DAC_RESET_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG12",
+                source: "HRTIM_DAC_RESET_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG13",
+                source: "HRTIM_DAC_RESET_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG14",
+                source: "HRTIM_DAC_RESET_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG6",
+                source: "EXTI10_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG9",
+                source: "HRTIM_DAC_STEP_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG10",
+                source: "HRTIM_DAC_STEP_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG11",
+                source: "HRTIM_DAC_STEP_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG12",
+                source: "HRTIM_DAC_STEP_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG13",
+                source: "HRTIM_DAC_STEP_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG14",
+                source: "HRTIM_DAC_STEP_TRG6",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "TIM6_DAC",
@@ -1165,6 +2701,124 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(41),
         }],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG15",
+                source: "HRTIM_DAC_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG6",
+                source: "EXTI9_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG9",
+                source: "HRTIM_DAC_RESET_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG10",
+                source: "HRTIM_DAC_RESET_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG11",
+                source: "HRTIM_DAC_RESET_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG12",
+                source: "HRTIM_DAC_RESET_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG13",
+                source: "HRTIM_DAC_RESET_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG14",
+                source: "HRTIM_DAC_RESET_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG6",
+                source: "EXTI10_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG9",
+                source: "HRTIM_DAC_STEP_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG10",
+                source: "HRTIM_DAC_STEP_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG11",
+                source: "HRTIM_DAC_STEP_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG12",
+                source: "HRTIM_DAC_STEP_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG13",
+                source: "HRTIM_DAC_STEP_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG14",
+                source: "HRTIM_DAC_STEP_TRG6",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "TIM7_DAC",
@@ -1210,6 +2864,124 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 remap: &[],
                 dma: None,
                 request: Some(103),
+            },
+        ],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG1",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG15",
+                source: "HRTIM_DAC_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG6",
+                source: "EXTI9_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG9",
+                source: "HRTIM_DAC_RESET_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG10",
+                source: "HRTIM_DAC_RESET_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG11",
+                source: "HRTIM_DAC_RESET_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG12",
+                source: "HRTIM_DAC_RESET_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG13",
+                source: "HRTIM_DAC_RESET_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG14",
+                source: "HRTIM_DAC_RESET_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG1",
+                source: "TIM1_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG6",
+                source: "EXTI10_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG9",
+                source: "HRTIM_DAC_STEP_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG10",
+                source: "HRTIM_DAC_STEP_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG11",
+                source: "HRTIM_DAC_STEP_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG12",
+                source: "HRTIM_DAC_STEP_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG13",
+                source: "HRTIM_DAC_STEP_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG14",
+                source: "HRTIM_DAC_STEP_TRG6",
             },
         ],
         interrupts: &[PeripheralInterrupt {
@@ -1259,6 +3031,124 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(105),
             },
         ],
+        triggers: &[
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG15",
+                source: "HRTIM_DAC_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG6",
+                source: "EXTI9_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG9",
+                source: "HRTIM_DAC_RESET_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG10",
+                source: "HRTIM_DAC_RESET_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG11",
+                source: "HRTIM_DAC_RESET_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG12",
+                source: "HRTIM_DAC_RESET_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG13",
+                source: "HRTIM_DAC_RESET_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_CHX_TRG14",
+                source: "HRTIM_DAC_RESET_TRG6",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG1",
+                source: "TIM8_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG2",
+                source: "TIM7_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG3",
+                source: "TIM15_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG4",
+                source: "TIM2_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG5",
+                source: "TIM4_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG6",
+                source: "EXTI10_TRG",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG7",
+                source: "TIM6_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG8",
+                source: "TIM3_TRGO",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG9",
+                source: "HRTIM_DAC_STEP_TRG1",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG10",
+                source: "HRTIM_DAC_STEP_TRG2",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG11",
+                source: "HRTIM_DAC_STEP_TRG3",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG12",
+                source: "HRTIM_DAC_STEP_TRG4",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG13",
+                source: "HRTIM_DAC_STEP_TRG5",
+            },
+            PeripheralTrigger {
+                signal: "DAC_INC_CHX_TRG14",
+                source: "HRTIM_DAC_STEP_TRG6",
+            },
+        ],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "TIM7_DAC",
@@ -1277,6 +3167,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1304,6 +3195,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "CH1",
@@ -1364,6 +3256,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "CH1",
@@ -1424,6 +3317,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "OVR",
             interrupt: "DMAMUX_OVR",
@@ -1442,6 +3336,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "EXTI0",
@@ -1558,6 +3453,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "IT0",
@@ -1618,6 +3514,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "IT0",
@@ -1678,6 +3575,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "IT0",
@@ -1702,6 +3600,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1717,6 +3616,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1732,6 +3632,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1759,6 +3660,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "FLASH",
@@ -1806,6 +3708,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(111),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "FMAC",
@@ -1836,6 +3739,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1863,6 +3767,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1890,6 +3795,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1917,6 +3823,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1944,6 +3851,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1971,6 +3879,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -1998,6 +3907,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -2253,6 +4163,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(101),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "FLT",
@@ -2369,6 +4280,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(17),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -2456,6 +4368,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(19),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -2548,6 +4461,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(21),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -2630,6 +4544,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(23),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ER",
@@ -2654,6 +4569,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -2730,6 +4646,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "LPTIM1",
@@ -2841,6 +4758,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(35),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "LPUART1",
@@ -2940,6 +4858,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3036,6 +4955,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3132,6 +5052,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3198,6 +5119,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3279,6 +5201,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3360,6 +5283,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3387,6 +5311,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -3480,6 +5405,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "QUADSPI",
@@ -3534,6 +5460,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "CRS",
@@ -3574,6 +5501,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "RNG",
@@ -3640,6 +5568,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "ALARM",
@@ -3816,6 +5745,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(109),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "A",
@@ -3910,6 +5840,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(11),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI1",
@@ -4038,6 +5969,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(13),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI2",
@@ -4166,6 +6098,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(15),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "SPI3",
@@ -4196,6 +6129,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -4211,6 +6145,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -4451,6 +6386,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(48),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -4573,6 +6509,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(81),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -4674,6 +6611,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(83),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -4770,6 +6708,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(85),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -4930,6 +6869,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(60),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5051,6 +6991,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(94),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5219,6 +7160,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(66),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5354,6 +7296,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(71),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5487,6 +7430,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(77),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5542,6 +7486,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(8),
         }],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5597,6 +7542,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             dma: None,
             request: Some(9),
         }],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5843,6 +7789,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(55),
             },
         ],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "BRK",
@@ -5937,6 +7884,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(31),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "UART4",
@@ -6013,6 +7961,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(33),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "UART5",
@@ -6131,6 +8080,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(115),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "UCPD1",
@@ -6149,6 +8099,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -6252,6 +8203,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(25),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "USART1",
@@ -6363,6 +8315,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(27),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "USART2",
@@ -6484,6 +8437,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
                 request: Some(29),
             },
         ],
+        triggers: &[],
         interrupts: &[PeripheralInterrupt {
             signal: "GLOBAL",
             interrupt: "USART3",
@@ -6528,6 +8482,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
             },
         ],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "HP",
@@ -6556,6 +8511,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -6571,6 +8527,23 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         rcc: None,
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
+        interrupts: &[],
+        afio: None,
+    },
+    Peripheral {
+        name: "VREFINTCAL",
+        address: 0x1fff75aa,
+        registers: Some(PeripheralRegisters {
+            kind: "vrefintcal",
+            version: "v1",
+            block: "VREFINTCAL",
+            ir: &vrefintcal::REGISTERS,
+        }),
+        rcc: None,
+        pins: &[],
+        dma_channels: &[],
+        triggers: &[],
         interrupts: &[],
         afio: None,
     },
@@ -6595,6 +8568,7 @@ pub(crate) static PERIPHERALS: &[Peripheral] = &[
         }),
         pins: &[],
         dma_channels: &[],
+        triggers: &[],
         interrupts: &[
             PeripheralInterrupt {
                 signal: "GLOBAL",
@@ -7259,5 +9233,7 @@ pub mod usb;
 pub mod usbram;
 #[path = "../registers/vrefbuf_v2b.rs"]
 pub mod vrefbuf;
+#[path = "../registers/vrefintcal_v1.rs"]
+pub mod vrefintcal;
 #[path = "../registers/wwdg_v2.rs"]
 pub mod wwdg;

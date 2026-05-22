@@ -164,6 +164,24 @@
               "dmamux": "DMAMUX1",
               "request": 5
             }
+          ],
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "EXTI11_TRG"
+            }
           ]
         },
         {
@@ -173,7 +191,25 @@
             "kind": "adccommon",
             "version": "c0",
             "block": "ADC_COMMON"
-          }
+          },
+          "triggers": [
+            {
+              "signal": "ADC_EXT_TRG0",
+              "source": "TIM1_TRGO2"
+            },
+            {
+              "signal": "ADC_EXT_TRG1",
+              "source": "TIM1_CC4"
+            },
+            {
+              "signal": "ADC_EXT_TRG3",
+              "source": "TIM3_TRGO"
+            },
+            {
+              "signal": "ADC_EXT_TRG7",
+              "source": "EXTI11_TRG"
+            }
+          ]
         },
         {
           "name": "CRC",
@@ -839,7 +875,7 @@
           "address": 1073818624,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_ADV"
           },
           "rcc": {
@@ -1011,7 +1047,7 @@
           "address": 1073750016,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH"
           },
           "rcc": {
@@ -1061,7 +1097,7 @@
           "address": 1073824768,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -1148,7 +1184,7 @@
           "address": 1073825792,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_1CH_CMP"
           },
           "rcc": {
@@ -1235,7 +1271,7 @@
           "address": 1073742848,
           "registers": {
             "kind": "timer",
-            "version": "v1",
+            "version": "v3",
             "block": "TIM_GP16"
           },
           "rcc": {
